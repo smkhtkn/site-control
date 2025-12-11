@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam & Archives — Le site le plus Chartiste du Web !</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Verdana&display=swap" rel="stylesheet">
+    <style>
+       
+        :root {
+            --bg-pink: #ffb6c1;       
+            --header-pink: #ff99cc;   
+            --hot-pink: #ff0090;      
+            --nav-pink: #ff1493;      
+            --link-red: #cc0000;      
+            --text-dark: #333333;
+            --yellow-btn: #fff000;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-pink);
+            font-family: 'Verdana', 'Arial', sans-serif;
+            font-size: 11px;
+            color: var(--text-dark);
+            background-image: linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 100% 3px;
+        }
+
+        a { color: var(--link-red); text-decoration: underline; cursor: pointer; }
+        a:hover { background-color: yellow; color: black; }
+
+        .page-wrapper {
+            width: 1000px; margin: 0 auto; background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-left: 2px solid #fff; border-right: 2px solid #fff;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #ffccdd, #ff99cc);
+            padding: 15px 20px 10px 20px;
+            position: relative; border-bottom: 4px solid #ff00cc;
+        }
+
+        .top-bar { display: flex; justify-content: space-between; align-items: flex-end; }
+        .logo-area { text-align: left; position: relative; z-index: 2; }
+        .welcome-text { 
+            font-size: 14px; font-weight: bold; color: #444; margin-bottom: -15px; margin-left: 5px; 
+            font-family: 'Permanent Marker', cursive; transform: rotate(-2deg);
+        }
+        h1.logo {
+            font-family: 'Anton', sans-serif; font-size: 82px; margin: 0; line-height: 0.9; color: #ff3399; 
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 5px 5px 0px rgba(0,0,0,0.15);
+            letter-spacing: -3px;
+        }
+        h1.logo span.enc { 
+            font-size: 30px; color: white; text-shadow: 2px 2px 0 #ff0090; vertical-align: top; 
+            margin-top: 15px; display:inline-block; transform: rotate(5deg);
+        }
+        .slogan {
+            font-family: 'Permanent Marker', cursive; font-size: 16px; color: #555; text-align: center;
+            margin-top: 5px; margin-bottom: 5px; text-shadow: 1px 1px 0 #fff;
+        }
+        .cartoon-char {
+            position: absolute; top: 5px; right: 20px; width: 140px; height: 120px;
+            background: url('https://via.placeholder.com/140x120/ffccdd/ff0090?text=GOSSIP+PROFS') no-repeat center;
+            transform: rotate(5deg); z-index: 1;
+        }
+
+        /* NAV */
+        nav.main-nav {
+            background: var(--nav-pink); padding: 6px 15px; display: flex; justify-content: space-between;
+            align-items: center; color: white; font-weight: bold; font-size: 12px;
+            border-top: 2px solid white; border-bottom: 2px solid #b30059;
+        }
+        .nav-links a { color: white; text-decoration: none; margin-right: 15px; text-transform: uppercase; font-family: 'Anton', sans-serif; letter-spacing: 1px; font-size:14px;}
+        .nav-links a:hover { text-decoration: underline; background: none; color: yellow; }
+        .search-box { display: flex; align-items: center; gap: 5px; }
+        .search-box input { border: 2px solid #b30059; padding: 3px; font-size: 11px; }
+        .search-box button {
+            background: var(--yellow-btn); border: 2px solid #cca300; font-weight: bold;
+            font-size: 11px; cursor: pointer; text-transform: uppercase; padding: 3px 8px;
+        }
+
+        /* BANNER */
+        .buzz-banner {
+            background: #ffeef5; border-bottom: 2px solid #ff66b2; padding: 8px 0;
+            color: #cc0066; font-family: 'Verdana', sans-serif; font-weight: bold;
+            font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+
+        /* CONTENT */
+        .container {
+            display: grid; grid-template-columns: 180px 1fr 250px; gap: 15px;
+            padding: 15px; background: #ffe6f0; 
+        }
+
+        aside { font-family: Arial, sans-serif; }
+        .sidebar-header {
+            font-family: 'Permanent Marker', cursive; color: #cc0000; font-size: 20px;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.8); margin-bottom: 5px; line-height: 1.1;
+            transform: rotate(-2deg); text-align: center;
+        }
+        .intro-text { font-size: 11px; margin-bottom: 15px; line-height: 1.3; text-align: center; }
+        .email-link { color: var(--hot-pink); font-weight: bold; font-size: 11px; display: block; margin-bottom: 15px;}
+
+        .top-celebs-widget {
+            background: var(--hot-pink); border-radius: 8px; padding: 6px; text-align: center;
+            border: 3px solid white; box-shadow: 3px 3px 6px rgba(0,0,0,0.2); margin-bottom: 20px;
+        }
+        .widget-title-img {
+            color: white; font-family: 'Anton', sans-serif; font-size: 22px; text-transform: uppercase;
+            margin-bottom: 8px; text-shadow: 2px 2px 0 #cc0066; line-height: 1;
+        }
+        .celeb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+        .celeb-item { background: black; position: relative; border: 1px solid white; }
+        .celeb-item img { width: 100%; height: 75px; object-fit: cover; display: block; opacity: 0.9; }
+        .celeb-item:hover img { opacity: 1; }
+        .celeb-name {
+            background: black; color: yellow; font-size: 9px; text-transform: uppercase;
+            padding: 3px 0; font-weight: bold; font-family: 'Verdana';
+        }
+        .left-btn {
+            display: block; width: 100%; margin-bottom: 15px; border: 2px solid black;
+            border-radius: 5px; background: white; padding: 2px; cursor: pointer;
+        }
+        .left-btn:hover { transform: scale(1.02); }
+
+        main.feed { background: transparent; }
+        .breadcrumb {
+            font-size: 10px; color: var(--link-red); font-weight: bold; margin-bottom: 15px;
+            border-bottom: 1px dotted #cc0000; padding-bottom: 5px;
+        }
+        .post-nav {
+            display: flex; justify-content: space-between; font-weight: bold; font-size: 10px;
+            margin-bottom: 10px; text-transform: uppercase;
+        }
+
+        .post {
+            background: white; margin-bottom: 35px; padding: 15px; border: 1px solid #ffccdd;
+            box-shadow: 3px 3px 0 #ff99cc; position: relative;
+        }
+        .post-headline {
+            font-family: 'Arial Black', 'Arial', sans-serif; font-weight: 900; font-size: 24px;
+            line-height: 1.1; color: black; margin-top: 0; margin-bottom: 5px; letter-spacing: -1px;
+        }
+        .post-headline a { text-decoration: none; color: black; }
+        .post-headline a:hover { color: var(--hot-pink); background: transparent; }
+        .filed-under {
+            font-size: 10px; color: #666; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 5px;
+        }
+        
+        /* DOODLE - STYLE MS PAINT */
+        .doodle {
+            position: absolute; font-family: 'Permanent Marker', cursive; color: white;
+            font-size: 28px; transform: rotate(-10deg); 
+            text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            z-index: 10; pointer-events: none;
+        }
+        
+        .post-body { font-size: 13px; line-height: 1.5; color: #333; }
+        .post-body p { margin-bottom: 12px; }
+        .post-body a.keyword {
+            color: var(--hot-pink); font-weight: bold; text-decoration: none; background: #fff0f5; padding: 0 2px;
+        }
+        .post-body a.keyword:hover { text-decoration: underline; background: yellow; color: red; }
+        .tags-footer {
+            margin-top: 15px; font-size: 10px; color: #cc0000; font-weight: bold; text-transform: uppercase;
+        }
+
+        .video-player-container {
+            width: 100%; height: 300px; background: #000; position: relative; margin-bottom: 15px; border: 4px solid #444;
+        }
+        .video-title-overlay {
+            position: absolute; top: 10px; left: 10px; color: white; font-size: 16px; font-weight: bold;
+            font-family: Arial, sans-serif; text-shadow: 1px 1px 2px black;
+        }
+        .play-btn-fake {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 50px;
+            background: rgba(200, 0, 0, 0.85); border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer;
+        }
+        .play-btn-fake::after {
+            content: ''; border-left: 18px solid white; border-top: 12px solid transparent; border-bottom: 12px solid transparent;
+        }
+        .controls-fake {
+            position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: linear-gradient(to bottom, #eee, #ccc);
+            display: flex; align-items: center; padding: 0 10px; border-top: 1px solid #999;
+        }
+
+        /* PUB SMS */
+        .fake-ad-sms {
+            margin-top: 20px;
+            border: 3px dashed #ff0090;
+            background: #fff800;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        .fake-ad-sms h3 {
+            margin: 0; color: red; text-transform: uppercase; font-size: 16px; font-weight: 900;
+            animation: blink 1s infinite;
+        }
+        .fake-ad-sms p { margin: 5px 0; font-size: 11px; font-weight: bold; color: black; line-height: 1.2;}
+        .sms-code {
+            background: black; color: white; font-family: 'Courier New', monospace;
+            font-size: 16px; padding: 3px 8px; display: inline-block; transform: rotate(-2deg);
+        }
+        @keyframes blink { 50% { opacity: 0.5; } }
+
+        .advertise-link { text-align: right; font-size: 10px; display: block; margin-bottom: 5px; color:#666; text-decoration: none;}
+        .glam-tv-container {
+            background: var(--hot-pink); border-radius: 12px 12px 0 0; padding: 6px; box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+        .glam-tv-header {
+            background: linear-gradient(to bottom, #ff66b2, #ff0080); border-radius: 8px; padding: 8px 5px;
+            text-align: center; margin-bottom: 8px; border: 2px solid white;
+        }
+        .tv-logo {
+            font-family: 'Anton', sans-serif; font-size: 32px; color: white; text-shadow: 2px 2px 0 #b30059; line-height: 1;
+        }
+        .tv-tabs {
+            display: flex; justify-content: space-around; color: white; font-weight: bold; font-size: 11px;
+            margin: 8px 0 4px 0; text-decoration: underline; cursor: pointer;
+        }
+        .video-list { background: var(--hot-pink); padding: 2px; }
+        .video-item { display: flex; flex-direction: column; margin-bottom: 12px; background: transparent; cursor: pointer; }
+        .video-item:hover .video-thumb { border-color: yellow; }
+        .video-thumb {
+            width: 100%; height: 130px; background: black; border: 2px solid white; position: relative; margin-bottom: 4px;
+        }
+        .video-thumb img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+        .video-meta { color: white; font-size: 11px; font-weight: bold; line-height: 1.3; padding: 0 4px; }
+        .video-meta .title { margin-bottom: 2px; display: block; text-shadow: 1px 1px 0 #b30059; }
+        .video-meta .views { font-size: 9px; font-weight: normal; opacity: 0.9; color: yellow;}
+
+        footer {
+            background: var(--nav-pink); color: white; text-align: center; padding: 15px; font-size: 10px;
+            margin-top: 20px; border-top: 4px solid white; font-family: 'Verdana';
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <header>
+        <div class="cartoon-char"></div>
+        <div class="top-bar">
+            <div class="logo-area">
+                <div class="welcome-text">Bienvenue sur</div>
+                <h1 class="logo">GLAM & ARCHIVES<span class="enc">.ENC</span></h1>
+            </div>
+        </div>
+        <div class="slogan">Digital Humanities, Paleography & Tea — Not From Concentrate</div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Scoops</a>
+            <a href="#">Photos</a>
+            <a href="#">Thèses Scandales</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Rechercher un prof..." size="20">
+            <button>SEARCH!</button>
+        </div>
+    </nav>
+
+    <div class="buzz-banner">
+        <marquee scrollamount="6" scrolldelay="60">
+            🚨 ALERTE ROUGE À LA BNF : UN INCUNABLE DISPARU ?! • PANIQUE AUX ARCHIVES NATIONALES : PLUS DE PLACE DANS LES RAYONNAGES ! • QUI A VOLÉ LE TAMPON ENCREUR DE LA SALLE LABROUSTE ? • FLASH SPÉCIAL : LA MACHINE À CAFÉ DU 65 RUE DE RICHELIEU EST EN PANNE ! 🚨
+        </marquee>
+    </div>
+
+
+    <div class="container">
+        
+        <aside class="left-col">
+            <div class="sidebar-header">BIENVENUE</div>
+            <div class="intro-text">
+                Bienvenue sur Glam & Archives - Le seul site où la diplomatique rencontre le drama !
+            </div>
+
+            <div class="sidebar-header" style="transform: rotate(-3deg); margin-top:15px; font-size: 18px;">ENVOYEZ VOS SCOOPS !</div>
+            <div class="intro-text">
+                Un document mal coté ?<br>
+                Une rumeur à la BNF ?<br>
+                <a href="#" class="email-link">Gossip@Chartes.psl.eu</a>
+            </div>
+
+            <div class="top-celebs-widget">
+                <div class="widget-title-img">TOP PROFS</div>
+                <div class="celeb-grid">
+                    <div class="celeb-item">
+                        <img src="https://via.placeholder.com/100/2ecc71/ffffff?text=E.V." alt="Vasseur">
+                        <div class="celeb-name">VASSEUR</div>
+                    </div>
+                    <div class="celeb-item">
+                        <img src="https://via.placeholder.com/100/9b59b6/ffffff?text=O.P." alt="Poncet">
+                        <div class="celeb-name">PONCET</div>
+                    </div>
+                    <div class="celeb-item">
+                        <img src="https://via.placeholder.com/100/f1c40f/333333?text=C.G." alt="Gauthier">
+                        <div class="celeb-name">GAUTHIER</div>
+                    </div>
+                    <div class="celeb-item">
+                        <img src="https://via.placeholder.com/100/e74c3c/ffffff?text=E.B." alt="Bermes">
+                        <div class="celeb-name">BERMÈS</div>
+                    </div>
+                </div>
+                <select style="width: 100%; margin-top: 5px; font-size:10px; background:white; border:1px solid black;">
+                    <option>voir plus de chartistes</option>
+                </select>
+            </div>
+
+            <div class="left-btn">
+                <div style="background:#ff99cc; padding:10px; text-align:center; font-family:'Anton'; font-size:18px; color:black; transform:rotate(-1deg);">
+                    CLIQUEZ POUR<br><span style="color:white; -webkit-text-stroke:1px black; font-size: 22px;">LES NOTES</span>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="feed">
+            <div class="breadcrumb">Accueil >> Scoops >> Administration</div>
+            <div class="post-nav">
+                <a href="#">« BREAKING : Pénurie de crayons à papier HB !</a>
+                <a href="#">Diplomatique : La Cire c'est fini ? »</a>
+            </div>
+
+            <article class="post" style="border: 3px solid red; background: #fffbfb;">
+                <h2 class="post-headline" style="color:red; text-transform:uppercase; font-size: 26px;">
+                    <a href="#" style="color:red;">RUMEUR ROYALE : François Ier furieux ! L'Ordonnance de 1537 bafouée à la BNF ?</a>
+                </h2>
+                <div class="filed-under">Classé dans: <a href="#">SCOOP HISTORIQUE</a> > <a href="#">Dépôt Légal</a></div>
+
+                <div style="position:relative; margin-bottom:15px;">
+                    <img src="https://via.placeholder.com/500x350/550000/ffffff?text=FRANCOIS+1ER+PAS+CONTENT" style="width:100%; display:block; border:3px solid black; filter: sepia(50%) contrast(110%);">
+                </div>
+
+                <div class="post-body" style="font-size: 14px;">
+                    <p>Scène surnaturelle dans la réserve des livres rares ! Le spectre de <strong>François Ier</strong> a été aperçu, brandissant l'Ordonnance de Montpellier de 1537.</p>
+                    <p style="background:#ffecf5; padding:10px; border:2px dashed #ff0090; font-style:italic;">
+                        <strong>SPOTTED :</strong> Le Roy hurlait sur un pauvre étudiant qui tentait de déposer sa thèse sur un CD-ROM. <em>"Tout livre imprimé doit être mis en ma librairie ! Je veux du vélin, du papier chiffon ! Que nenni ce format numérique du diable !"</em>
+                    </p>
+                    <p>On rappelle à tous que le Dépôt Légal, c'est sacré. Si vous ne voulez pas finir au cachot de la Bastille (ou pire, privés de carte de lecteur), apportez votre exemplaire papier !</p>
+                    <p style="color: red; font-weight: bold; text-align: center; font-size:16px;">TELL US : Avez-vous peur du fantôme du Roy ? BOOOO </p>
+                </div>
+            </article>
+
+            <article class="post">
+                <h2 class="post-headline"><a href="#">BIG BROTHER ou BIG SISTER ? Emmanuelle Bermès & Marina Hervieu traquent vos Skyblogs ! </a></h2>
+                <div class="filed-under">Classé dans: <a href="#">Tech</a> > <a href="#">Projet Webcorpora</a></div>
+
+                <div style="position:relative; margin-bottom:15px;">
+                    <img src="https://via.placeholder.com/500x300/3498db/ffffff?text=SKYBLOG+ARCHIVÉ+%3F" style="width:100%; display:block; border:2px solid black;">
+                </div>
+
+                <div class="post-body">
+                    <p>Vous pensiez pouvoir supprimer discrètement vos poèmes d'amour de 4ème B ? <strong>IMPOSSIBLE !</strong></p>
+                    <p>Le duo de choc <a href="#" class="keyword">Emmanuelle Bermès</a> et <a href="#" class="keyword">Marina Hervieu</a> a lancé le projet <strong>"Webcorpora"</strong>. Elles parcourent le web avec leurs robots moissonneurs ! 🤖</p>
+                    <p>Leur message est clair pour tous les chartistes qui ont un blog sur Tokio Hotel : <em>"Souriez, vous êtes filmés, enfin... archivés !"</em> 📸</p>
+                    <p>Tout est gardé pour l'éternité (et pour la science, paraît-il). C'est la fin de l'oubli numérique ! On adore ou on déteste ?</p>
+                    <p style="text-align:center; font-weight:bold; color:#ff0090;">LAISSEZ VOS COMS ! (Ils seront archivés aussi lol)</p>
+                </div>
+            </article>
+
+            <article class="post">
+                <h2 class="post-headline"><a href="#">CLASH DES ANCIENS : Edouard Vasseur balance TOUT sur l'archivage électronique ! </a></h2>
+                <div class="filed-under">Classé dans: <a href="#">Diplomatique</a> > <a href="#">Best-Seller</a></div>
+
+                <div class="post-body">
+                    <p>Le livre que tout le monde s'arrache sous le manteau s'intitule :</p>
+                    <p style="font-weight:bold; font-size:14px; color:#cc0000; font-family:'Arial Black'; border:1px dotted red; padding:5px;">"L’archivage électronique dans l’administration publique : expériences croisées de trois services d’archives ministériels"</p>
+                    <p>Derrière ce titre à rallonge se cache le manifeste explosif d'<a href="#" class="keyword">Edouard Vasseur</a>. Il ose dire tout haut ce que tout le monde pense tout bas : <strong>Le papier, c'est fini !</strong> 😲</p>
+                    <p>Dans cet ouvrage, il défie les lois de la diplomatique classique. Pour lui, un fichier `.doc` a une âme. Les puristes du parchemin crient au scandale, mais Vasseur regarde vers le futur. C'est le Harry Potter des Archives Nationales !</p>
+                </div>
+                <div class="tags-footer">Tags: iso 15489, e-administration, vasseur solo, révolution numérique</div>
+            </article>
+
+            <article class="post">
+                <h2 class="post-headline"><a href="#">PANIQUE AU CINÉMA ! Christophe Gauthier vs "YouTube" : La fin de l'Histoire ?!</a></h2>
+                <div class="filed-under">Classé dans: <a href="#">Médias</a> > <a href="#">Apocalypse</a></div>
+
+                <div class="video-player-container">
+                    <div class="video-title-overlay">DEBAT: Le Cinéma est-il mort ?</div>
+                    <div class="play-btn-fake"></div>
+                    <div class="controls-fake">
+                        <span style="margin-right:10px;">▶</span>
+                        <div style="flex:1; height:4px; background:#666; margin:0 10px;">
+                            <div style="width:20%; height:100%; background:#cc0000;"></div>
+                        </div>
+                        <span style="font-size:10px;">0:42 / 5:00</span>
+                    </div>
+                </div>
+
+                <div class="post-body">
+                    <p>ALERTE ROUGE ! <a href="#" class="keyword">Christophe Gauthier</a> est sorti de ses gonds à la Cinémathèque ce matin.</p>
+                    <p>La raison ? Un site bizarre racheté par Google qui s'appelle <strong>"You Tube"</strong>. Des millions de vidéos floues !</p>
+                    <p><em>"Comment faire l'histoire des médias avec ce chaos ?!"</em> s'inquiète notre spécialiste. Il prédit que si on ne fait rien, le patrimoine audiovisuel va disparaître dans un océan de pixels moches.</p>
+                </div>
+            </article>
+
+        </main>
+
+
+        <aside class="right-col">
+            <a href="#" class="advertise-link">Publier une thèse ici</a>
+            
+            <div class="glam-tv-container">
+                <div class="glam-tv-header">
+                    <div class="tv-logo">ARCHIVES <span>TV</span></div>
+                    <div class="tv-tabs"><span>Récents</span><span>Populaires</span></div>
+                </div>
+                <div class="video-list">
+                    <div class="video-item">
+                        <div class="video-thumb">
+                            <img src="https://via.placeholder.com/200x120/cc0000/ffffff?text=PSL+LOVES+ENC" alt="Video">
+                            <span style="position:absolute; bottom:2px; right:2px; background:black; color:white; font-size:9px; padding:1px;">10:04</span>
+                        </div>
+                        <div class="video-meta"><span class="title">RUMEUR : PSL fait les yeux doux à l'ENC... La Sorbonne jalouse ?</span><span class="views">99k vues</span></div>
+                    </div>
+                    
+                    <div class="video-item">
+                        <div class="video-thumb">
+                            <img src="https://via.placeholder.com/200x120/003366/ffffff?text=CLASH+ENC" alt="Video">
+                            <span style="position:absolute; bottom:2px; right:2px; background:black; color:white; font-size:9px; padding:1px;">3:30</span>
+                        </div>
+                        <div class="video-meta"><span class="title">CLASH : Table ronde ou ring de boxe ? (Images censurées)</span><span class="views">1M vues</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:20px; border:1px solid #ccc;">
+                <img src="https://via.placeholder.com/240x240/ffcc00/000000?text=ACHETEZ+VOTRE+DIPLOME+ICI" style="width:100%; display:block;">
+            </div>
+
+            <div class="fake-ad-sms">
+                <h3>⚠️ INFIDÉLITÉ ? ⚠️</h3>
+                <p>Ton partenaire utilise-t-il<br><strong>OMEKA S</strong><br>dans ton dos ?</p>
+                <p>Pour le savoir, envoie</p>
+                <div class="sms-code">ADEMEC</div>
+                <p>au <strong>71515</strong></p>
+                <p style="font-size:9px; font-weight:normal;">(0,50€ / SMS + coût adhésion ADEMEC)</p>
+            </div>
+
+        </aside>
+
+    </div> 
+
+    <footer>
+        COPYRIGHT © 2006-2024 GLAM & ARCHIVES INC. <br> 
+        Site parodique réalisé pour l'amour de la Chartes. XOXO.
+    </footer>
+
+</div>
+</body>
+</html>
