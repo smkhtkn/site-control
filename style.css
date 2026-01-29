@@ -12,8 +12,8 @@
             margin: 0;
             padding: 0;
             background-color: var(--bg-pink);
-            background-image: linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
-            background-size: 100% 3px;
+            background-image: url('images/stars-sparkles.gif');
+            background-repeat: repeat;
             font-family: 'Verdana', 'Arial', sans-serif;
             font-size: 11px;
             color: var(--text-dark);
