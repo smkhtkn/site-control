@@ -376,6 +376,7 @@ aside {
     font-size: 18px;
     color: var(--black);
     transform: rotate(-1deg);
+    text-decoration: none !important;
 }
 
 .btn-notes-highlight {
