@@ -47,7 +47,7 @@
                 Bienvenue sur Glam & Archives - Le seul site où la diplomatique rencontre le drama !
             </div>
 
-            <div class="sidebar-header" style="transform: rotate(-3deg); margin-top:15px; font-size: 18px;">ENVOYEZ VOS SCOOPS !</div>
+            <div class="sidebar-header sidebar-header-scoops">ENVOYEZ VOS SCOOPS !</div>
             <div class="intro-text">
                 Un document mal coté ?<br>
                 Une rumeur à l'ENC ?<br>
@@ -74,14 +74,14 @@
                         <div class="celeb-name">BERMÈS</div>
                     </div>
                 </div>
-                <select style="width: 100%; margin-top: 5px; font-size:10px; background:white; border:1px solid black;">
+                <select class="select-dropdown">
                     <option>voir plus de chartistes</option>
                 </select>
             </div>
 
             <div class="left-btn">
-                <div style="background:#ff99cc; padding:10px; text-align:center; font-family:'Anton'; font-size:18px; color:black; transform:rotate(-1deg);">
-                    CLIQUEZ POUR<br><span style="color:white; -webkit-text-stroke:1px black; font-size: 22px;">LES NOTES</span>
+                <div class="btn-notes">
+                    CLIQUEZ POUR<br><span class="btn-notes-highlight">LES NOTES</span>
                 </div>
             </div>
         </aside>
@@ -94,23 +94,23 @@
                 <a href="#">Diplomatique : La Cire c'est fini ? »</a>
             </div>
 
-            <article class="post" style="border: 3px solid red; background: #fffbfb;">
-                <h2 class="post-headline" style="color:red; text-transform:uppercase; font-size: 26px;">
-                    <a href="#" style="color:red;">RUMEUR ROYALE : François Ier furieux ! L'Ordonnance de 1537 bafouée à la BNF ?</a>
+            <article class="post post-alerte">
+                <h2 class="post-headline post-headline-alerte">
+                    <a href="#">RUMEUR ROYALE : François Ier furieux ! L'Ordonnance de 1537 bafouée à la BNF ?</a>
                 </h2>
                 <div class="filed-under">Classé dans: <a href="#">SCOOP HISTORIQUE</a> > <a href="#">Dépôt Légal</a></div>
 
-                <div style="position:relative; margin-bottom:15px;">
-                    <img src="https://via.placeholder.com/500x350/550000/ffffff?text=FRANCOIS+1ER+PAS+CONTENT" style="width:100%; display:block; border:3px solid black; filter: sepia(50%) contrast(110%);">
+                <div class="post-image-container">
+                    <img src="https://via.placeholder.com/500x350/550000/ffffff?text=FRANCOIS+1ER+PAS+CONTENT" class="post-image post-image-vintage">
                 </div>
 
-                <div class="post-body" style="font-size: 14px;">
+                <div class="post-body">
                     <p>Scène surnaturelle dans la réserve des livres rares ! Le spectre de <strong>François Ier</strong> a été aperçu, brandissant l'Ordonnance de Montpellier de 1537.</p>
-                    <p style="background:#ffecf5; padding:10px; border:2px dashed #ff0090; font-style:italic;">
+                    <p class="post-quote">
                         <strong>SPOTTED :</strong> Le Roy hurlait sur un pauvre étudiant qui tentait de déposer sa thèse sur un CD-ROM. <em>"Tout livre imprimé doit être mis en ma librairie ! Je veux du vélin, du papier chiffon ! Que nenni ce format numérique du diable !"</em>
                     </p>
                     <p>On rappelle à tous que le Dépôt Légal, c'est sacré. Si vous ne voulez pas finir au cachot de la Bastille (ou pire, privés de carte de lecteur), apportez votre exemplaire papier !</p>
-                    <p style="color: red; font-weight: bold; text-align: center; font-size:16px;">TELL US : Avez-vous peur du fantôme du Roy ? BOOOO </p>
+                    <p class="post-cta">TELL US : Avez-vous peur du fantôme du Roy ? BOOOO </p>
                 </div>
             </article>
 
@@ -118,8 +118,8 @@
                 <h2 class="post-headline"><a href="#">BIG BROTHER ou BIG SISTER ? Emmanuelle Bermès & Marina Hervieu traquent vos Skyblogs ! </a></h2>
                 <div class="filed-under">Classé dans: <a href="#">Tech</a> > <a href="#">Projet Webcorpora</a></div>
 
-                <div style="position:relative; margin-bottom:15px;">
-                    <img src="https://via.placeholder.com/500x300/3498db/ffffff?text=SKYBLOG+ARCHIVÉ+%3F" style="width:100%; display:block; border:2px solid black;">
+                <div class="post-image-container">
+                    <img src="https://via.placeholder.com/500x300/3498db/ffffff?text=SKYBLOG+ARCHIVÉ+%3F" class="post-image">
                 </div>
 
                 <div class="post-body">
@@ -127,7 +127,7 @@
                     <p>Le duo de choc <a href="#" class="keyword">Emmanuelle Bermès</a> et <a href="#" class="keyword">Marina Hervieu</a> a lancé le projet <strong>"Webcorpora"</strong>. Elles parcourent le web avec leurs robots moissonneurs ! 🤖</p>
                     <p>Leur message est clair pour tous les chartistes qui ont un blog sur Tokio Hotel : <em>"Souriez, vous êtes filmés, enfin... archivés !"</em> 📸</p>
                     <p>Tout est gardé pour l'éternité (et pour la science, paraît-il). C'est la fin de l'oubli numérique ! On adore ou on déteste ?</p>
-                    <p style="text-align:center; font-weight:bold; color:#ff0090;">LAISSEZ VOS COMS ! (Ils seront archivés aussi lol)</p>
+                    <p class="post-cta-pink">LAISSEZ VOS COMS ! (Ils seront archivés aussi lol)</p>
                 </div>
             </article>
 
@@ -137,7 +137,7 @@
 
                 <div class="post-body">
                     <p>Le livre que tout le monde s'arrache sous le manteau s'intitule :</p>
-                    <p style="font-weight:bold; font-size:14px; color:#cc0000; font-family:'Arial Black'; border:1px dotted red; padding:5px;">"L’archivage électronique dans l’administration publique : expériences croisées de trois services d’archives ministériels"</p>
+                    <p class="book-title">"L'archivage électronique dans l'administration publique : expériences croisées de trois services d'archives ministériels"</p>
                     <p>Derrière ce titre à rallonge se cache le manifeste explosif d'<a href="#" class="keyword">Edouard Vasseur</a>. Il ose dire tout haut ce que tout le monde pense tout bas : <strong>Le papier, c'est fini !</strong> 😲</p>
                     <p>Dans cet ouvrage, il défie les lois de la diplomatique classique. Pour lui, un fichier `.doc` a une âme. Les puristes du parchemin crient au scandale, mais Vasseur regarde vers le futur. C'est le Harry Potter des Archives Nationales !</p>
                 </div>
@@ -152,11 +152,11 @@
                     <div class="video-title-overlay">DEBAT: Le Cinéma est-il mort ?</div>
                     <div class="play-btn-fake"></div>
                     <div class="controls-fake">
-                        <span style="margin-right:10px;">▶</span>
-                        <div style="flex:1; height:4px; background:#666; margin:0 10px;">
-                            <div style="width:20%; height:100%; background:#cc0000;"></div>
+                        <span class="controls-play">▶</span>
+                        <div class="controls-progress">
+                            <div class="controls-progress-bar"></div>
                         </div>
-                        <span style="font-size:10px;">0:42 / 5:00</span>
+                        <span class="controls-time">0:42 / 5:00</span>
                     </div>
                 </div>
 
@@ -182,7 +182,7 @@
                     <div class="video-item">
                         <div class="video-thumb">
                             <img src="https://via.placeholder.com/200x120/cc0000/ffffff?text=PSL+LOVES+ENC" alt="Video">
-                            <span style="position:absolute; bottom:2px; right:2px; background:black; color:white; font-size:9px; padding:1px;">10:04</span>
+                            <span class="video-duration">10:04</span>
                         </div>
                         <div class="video-meta"><span class="title">RUMEUR : PSL fait les yeux doux à l'ENC... La Sorbonne jalouse ?</span><span class="views">99k vues</span></div>
                     </div>
@@ -190,15 +190,15 @@
                     <div class="video-item">
                         <div class="video-thumb">
                             <img src="https://via.placeholder.com/200x120/003366/ffffff?text=CLASH+ENC" alt="Video">
-                            <span style="position:absolute; bottom:2px; right:2px; background:black; color:white; font-size:9px; padding:1px;">3:30</span>
+                            <span class="video-duration">3:30</span>
                         </div>
                         <div class="video-meta"><span class="title">CLASH : Table ronde ou ring de boxe ? (Images censurées)</span><span class="views">1M vues</span></div>
                     </div>
                 </div>
             </div>
 
-            <div style="margin-top:20px; border:1px solid #ccc;">
-                <img src="https://via.placeholder.com/240x240/ffcc00/000000?text=ACHETEZ+VOTRE+DIPLOME+ICI" style="width:100%; display:block;">
+            <div class="ad-banner">
+                <img src="https://via.placeholder.com/240x240/ffcc00/000000?text=ACHETEZ+VOTRE+DIPLOME+ICI" alt="Publicité">
             </div>
 
             <div class="fake-ad-sms alerte">
@@ -207,7 +207,7 @@
                 <p>Pour le savoir, envoie</p>
                 <div class="sms-code">ADEMEC</div>
                 <p>au <strong>71515</strong></p>
-                <p style="font-size:9px; font-weight:normal;">(0,50€ / SMS + coût adhésion ADEMEC)</p>
+                <p class="ad-disclaimer">(0,50€ / SMS + coût adhésion ADEMEC)</p>
             </div>
 
         </aside>

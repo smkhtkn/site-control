@@ -24,7 +24,7 @@
             src: url('fonts/Verdana_latin.woff2') format('woff2');
         }
 
-        /* Définition des couleurs */
+        /* Définition des couleurs. Grâce à cela, nous définissons les couleurs standard et pouvons les modifier en un seul clic */
 
         :root {
             --bg-pink: #ffb6c1;
@@ -34,6 +34,10 @@
             --link-red: #cc0000;
             --text-dark: #333333;
             --yellow-btn: #fff000;
+            --white: #ffffff;
+            --black: #000000;
+            --yellow: #ffff00;
+            --red: #ff0000;
         }
 
         /* Body */
@@ -56,23 +60,23 @@
         }
 
         a:hover {
-            background-color: yellow;
-            color: black;
+            background-color: var(--yellow);
+            color: var(--black);
         }
 
         .page-wrapper {
             width: 1000px;
             margin: 0 auto;
-            background: #fff;
+            background: var(--white);
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;
+            border-left: 2px solid var(--white);
+            border-right: 2px solid var(--white);
         }
 
         /* Mise en page du Header (l'en-tête du site) */
 
         header {
-            background: linear-gradient(to bottom, #ffccdd, #ff99cc);
+            background: linear-gradient(to bottom, #ffccdd, var(--header-pink));
             padding: 15px 20px 10px 20px;
             position: relative;
             border-bottom: 4px solid #ff00cc;
@@ -107,14 +111,14 @@
             line-height: 0.9;
             color: #ff3399;
             text-transform: uppercase;
-            text-shadow: 3px 3px 0px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 5px 5px 0px rgba(0,0,0,0.15);
-            letter-spacing: -3px;
+                        text-shadow: 3px 3px 0px var(--white), -2px -2px 0 var(--white), 2px -2px 0 var(--white), -2px 2px 0 var(--white), 2px 2px 0 var(--white), 5px 5px 0px rgba(0,0,0,0.15);
+                        letter-spacing: -3px;
         }
 
         h1.logo span.enc {
             font-size: 30px;
-            color: white;
-            text-shadow: 2px 2px 0 #ff0090;
+            color: var(--white);
+            text-shadow: 2px 2px 0 var(--hot-pink);
             vertical-align: top;
             margin-top: 15px;
             display: inline-block;
@@ -128,7 +132,7 @@
             text-align: center;
             margin-top: 5px;
             margin-bottom: 5px;
-            text-shadow: 1px 1px 0 #fff;
+            text-shadow: 1px 1px 0 var(--white);
         }
 
         .cartoon-char {
@@ -150,15 +154,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: white;
+            color: var(--white);
             font-weight: bold;
             font-size: 12px;
-            border-top: 2px solid white;
+            border-top: 2px solid var(--white);
             border-bottom: 2px solid #b30059;
         }
 
         .nav-links a {
-            color: white;
+            color: var(--white);
             text-decoration: none;
             margin-right: 15px;
             text-transform: uppercase;
@@ -170,7 +174,7 @@
         .nav-links a:hover {
             text-decoration: underline;
             background: none;
-            color: yellow;
+            color: var(--yellow);
         }
 
         .search-box {
@@ -223,7 +227,7 @@
 
         .sidebar-header {
             font-family: 'Permanent Marker', cursive;
-            color: #cc0000;
+            color: var(--link-red);
             font-size: 20px;
             text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
             margin-bottom: 5px;
@@ -252,13 +256,13 @@
             border-radius: 8px;
             padding: 6px;
             text-align: center;
-            border: 3px solid white;
+            border: 3px solid var(--white);
             box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
             margin-bottom: 20px;
         }
 
         .widget-title-img {
-            color: white;
+            color: var(--white);
             font-family: 'Anton', sans-serif;
             font-size: 22px;
             text-transform: uppercase;
@@ -274,9 +278,9 @@
         }
 
         .celeb-item {
-            background: black;
+            background: var(--black);
             position: relative;
-            border: 1px solid white;
+            border: 1px solid var(--white);
         }
 
         .celeb-item img {
@@ -292,8 +296,8 @@
         }
 
         .celeb-name {
-            background: black;
-            color: yellow;
+            background: var(--black);
+            color: var(--yellow);
             font-size: 9px;
             text-transform: uppercase;
             padding: 3px 0;
@@ -305,9 +309,9 @@
             display: block;
             width: 100%;
             margin-bottom: 15px;
-            border: 2px solid black;
+            border: 2px solid var(--black);
             border-radius: 5px;
-            background: white;
+            background: var(--white);
             padding: 2px;
             cursor: pointer;
         }
@@ -325,7 +329,7 @@
             color: var(--link-red);
             font-weight: bold;
             margin-bottom: 15px;
-            border-bottom: 1px dotted #cc0000;
+            border-bottom: 1px dotted var(--link-red);
             padding-bottom: 5px;
         }
 
@@ -339,11 +343,11 @@
         }
 
         .post {
-            background: white;
+            background: var(--white);
             margin-bottom: 35px;
             padding: 15px;
             border: 1px solid #ffccdd;
-            box-shadow: 3px 3px 0 #ff99cc;
+            box-shadow: 3px 3px 0 var(--header-pink);
             position: relative;
         }
 
@@ -352,7 +356,7 @@
             font-weight: 900;
             font-size: 24px;
             line-height: 1.1;
-            color: black;
+            color: var(--black);
             margin-top: 0;
             margin-bottom: 5px;
             letter-spacing: -1px;
@@ -360,7 +364,7 @@
 
         .post-headline a {
             text-decoration: none;
-            color: black;
+            color: var(--black);
         }
 
         .post-headline a:hover {
@@ -379,7 +383,7 @@
         .doodle {
             position: absolute;
             font-family: 'Permanent Marker', cursive;
-            color: white;
+            color: var(--white);
             font-size: 28px;
             transform: rotate(-10deg);
             text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -401,20 +405,20 @@
             color: var(--hot-pink);
             font-weight: bold;
             text-decoration: none;
-            background: #fff0f5;
+            background: var(--white);
             padding: 0 2px;
         }
 
         .post-body a.keyword:hover {
             text-decoration: underline;
-            background: yellow;
-            color: red;
+            background: var(--yellow);
+            color: var(--red);
         }
 
         .tags-footer {
             margin-top: 15px;
             font-size: 10px;
-            color: #cc0000;
+            color: var(--link-red);
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -432,11 +436,11 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            color: white;
+            color: var(--white);
             font-size: 16px;
             font-weight: bold;
             font-family: Arial, sans-serif;
-            text-shadow: 1px 1px 2px black;
+            text-shadow: 1px 1px 2px var(--black);
         }
 
         .play-btn-fake {
@@ -456,7 +460,7 @@
 
         .play-btn-fake::after {
             content: '';
-            border-left: 18px solid white;
+            border-left: 18px solid var(--white);
             border-top: 12px solid transparent;
             border-bottom: 12px solid transparent;
         }
@@ -475,7 +479,7 @@
         }
 
         .alerte {
-            border: 5px dashed #ff0090 !important;
+            border: 5px dashed var(--hot-pink) !important;
             background: #fff800 !important;
             box-shadow: 3px 3px 0 rgba(0,0,0,0.1) !important;
         }
@@ -489,7 +493,7 @@
 
         .fake-ad-sms h3 {
             margin: 0;
-            color: red;
+            color: var(--red);
             text-transform: uppercase;
             font-size: 16px;
             font-weight: 900;
@@ -500,13 +504,13 @@
             margin: 5px 0;
             font-size: 11px;
             font-weight: bold;
-            color: black;
+            color: var(--black);
             line-height: 1.2;
         }
 
         .sms-code {
-            background: black;
-            color: white;
+            background: var(--black);
+            color: var(--white);
             font-family: 'Courier New', monospace;
             font-size: 16px;
             padding: 3px 8px;
@@ -542,13 +546,13 @@
             padding: 8px 5px;
             text-align: center;
             margin-bottom: 8px;
-            border: 2px solid white;
+            border: 2px solid var(--white);
         }
 
         .tv-logo {
             font-family: 'Anton', sans-serif;
             font-size: 32px;
-            color: white;
+            color: var(--white);
             text-shadow: 2px 2px 0 #b30059;
             line-height: 1;
         }
@@ -556,7 +560,7 @@
         .tv-tabs {
             display: flex;
             justify-content: space-around;
-            color: white;
+            color: var(--white);
             font-weight: bold;
             font-size: 11px;
             margin: 8px 0 4px 0;
@@ -578,14 +582,14 @@
         }
 
         .video-item:hover .video-thumb {
-            border-color: yellow;
+            border-color: var(--yellow);
         }
 
         .video-thumb {
             width: 100%;
             height: 130px;
-            background: black;
-            border: 2px solid white;
+            background: var(--black);
+            border: 2px solid var(--white);
             position: relative;
             margin-bottom: 4px;
         }
@@ -598,7 +602,7 @@
         }
 
         .video-meta {
-            color: white;
+            color: var(--white);
             font-size: 11px;
             font-weight: bold;
             line-height: 1.3;
@@ -615,16 +619,16 @@
             font-size: 9px;
             font-weight: normal;
             opacity: 0.9;
-            color: yellow;
+            color: var(--yellow);
         }
 
         /* Page des thèses */
 
         .section-these {
-                background: #fff0f5;
+                background: var(--white);
                 padding: 15px;
-                border: 3px solid #ff99cc;
-                box-shadow: 5px 5px 0 #ff99cc;
+                border: 3px solid var(--header-pink);
+                box-shadow: 5px 5px 0 var(--header-pink);
                 margin: 15px 0px 20px 0px;
                 width: 100%;
                 box-sizing: border-box;
@@ -751,15 +755,159 @@
     color: #555;
 }
 
+        /* Classes utilitaires */
+
+        .sidebar-header-scoops {
+            transform: rotate(-3deg);
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .select-dropdown {
+            width: 100%;
+            margin-top: 5px;
+            font-size: 10px;
+            background: var(--white);
+            border: 1px solid var(--black);
+        }
+
+        .btn-notes {
+            background: var(--header-pink);
+            padding: 10px;
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 18px;
+            color: var(--black);
+            transform: rotate(-1deg);
+        }
+
+        .btn-notes-highlight {
+            color: var(--white);
+            -webkit-text-stroke: 1px var(--black);
+            font-size: 22px;
+        }
+
+        /* Posts spéciaux */
+
+        .post-alerte {
+            border: 3px solid red;
+            background: var(--white);
+        }
+
+        .post-headline-alerte {
+            color: var(--red);
+            text-transform: uppercase;
+            font-size: 26px;
+        }
+
+        .post-headline-alerte a {
+            color: var(--red);
+        }
+
+        .post-image-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .post-image {
+            width: 100%;
+            display: block;
+            border: 2px solid var(--black);
+        }
+
+        .post-image-vintage {
+            border: 3px solid var(--black);
+            filter: sepia(50%) contrast(110%);
+        }
+
+        .post-quote {
+            background: #ffecf5;
+            padding: 10px;
+            border: 2px dashed var(--hot-pink);
+            font-style: italic;
+        }
+
+        .post-cta {
+            color: var(--red);
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .post-cta-pink {
+            text-align: center;
+            font-weight: bold;
+            color: var(--hot-pink);
+        }
+
+        .book-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--link-red);
+            font-family: 'Arial Black', sans-serif;
+            border: 1px dotted red;
+            padding: 5px;
+        }
+
+        /* Video controls */
+
+        .controls-play {
+            margin-right: 10px;
+        }
+
+        .controls-progress {
+            flex: 1;
+            height: 4px;
+            background: #666;
+            margin: 0 10px;
+        }
+
+        .controls-progress-bar {
+            width: 20%;
+            height: 100%;
+            background: var(--link-red);
+        }
+
+        .controls-time {
+            font-size: 10px;
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 9px;
+            padding: 1px;
+        }
+
+        /* Publicité sidebar */
+
+        .ad-banner {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .ad-banner img {
+            width: 100%;
+            display: block;
+        }
+
+        .ad-disclaimer {
+            font-size: 9px;
+            font-weight: normal;
+        }
+
         /* Mise en page du footer */
 
         footer {
             background: var(--nav-pink);
-            color: white;
+            color: var(--white);
             text-align: center;
             padding: 15px;
             font-size: 10px;
             margin-top: 20px;
-            border-top: 4px solid white;
+            border-top: 4px solid var(--white);
             font-family: 'Verdana';
         }
