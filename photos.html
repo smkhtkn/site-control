@@ -26,8 +26,11 @@
             <a href="theses.html">Thèses Scandales</a>
         </div>
         <div class="search-box">
-            <input type="text" placeholder="Rechercher un prof..." size="20">
-            <button>SEARCH!</button>
+            <form action="https://www.google.com/search" method="get">
+                <input type="hidden" name="tbs" value="cdr:1,cd_min:1/1/2006,cd_max:12/31/2006">
+                <input type="text" name="q" placeholder="Rechercher..." size="20">
+                <button type="submit">SEARCH!</button>
+            </form>
         </div>
     </nav>
 
@@ -147,8 +150,8 @@
 
 
     <footer>
-        COPYRIGHT © 2006-2024 GLAM & ARCHIVES INC. <br> 
-        Site parodique réalisé pour l'amour de la Chartes. XOXO.
+        COPYRIGHT © 2006-2024 GLAM & GOSSIP INC. <br> 
+        Site parodique réalisé pour l'amour de l'ENC et du drama XOXO.
     </footer>
 
 </div>
