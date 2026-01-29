@@ -621,23 +621,23 @@
                 margin-top: 10px;
             }
 
-        /* Mise en page du footer */
+        /* Styles pour la galerie des professeurs */
 
-        footer {
-            background: var(--nav-pink);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 10px;
-            margin-top: 20px;
-            border-top: 4px solid white;
-            font-family: 'Verdana';
-        }/* Styles pour la galerie des professeurs */
+        .description-galerie {
+            grid-column: 1 / -1;
+        }
+
+        .description-galerie h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 40px;
+        }
+
 .prof-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+    grid-column: 1 / -1;
 }
 
 .prof-card {
@@ -720,3 +720,16 @@
     font-size: 14px;
     color: #555;
 }
+
+        /* Mise en page du footer */
+
+        footer {
+            background: var(--nav-pink);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 10px;
+            margin-top: 20px;
+            border-top: 4px solid white;
+            font-family: 'Verdana';
+        }
