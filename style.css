@@ -444,14 +444,17 @@
             border-top: 1px solid #999;
         }
 
+        .alerte {
+            border: 5px dashed #ff0090 !important;
+            background: #fff800 !important;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1) !important;
+        }
+
         .fake-ad-sms {
             margin-top: 20px;
-            border: 3px dashed #ff0090;
-            background: #fff800;
             padding: 10px;
             text-align: center;
             font-family: 'Arial', sans-serif;
-            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
         }
 
         .fake-ad-sms h3 {
@@ -592,7 +595,7 @@
                 padding: 15px;
                 border: 2px solid #ff99cc;
                 box-shadow: 5px 5px 0 #ff99cc;
-                margin-bottom: 20px;
+                margin: 15px 0px 20px 0px;
                 width: 100%;
                 box-sizing: border-box;
                 grid-column: 1 / -1;
@@ -610,6 +613,12 @@
                 font-family: 'Anton', sans-serif;
                 font-size: 40px;
                 margin: 0;
+            }
+        
+        .infos-these p {
+                font-size: 14px;
+                line-height: 1.5;
+                margin-top: 10px;
             }
 
         /* Mise en page du footer */
