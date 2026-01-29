@@ -39,6 +39,8 @@
             border-right: 2px solid #fff;
         }
 
+        /* Mise en page du Header (l'en-tête du site) */
+
         header {
             background: linear-gradient(to bottom, #ffccdd, #ff99cc);
             padding: 15px 20px 10px 20px;
@@ -110,6 +112,8 @@
             z-index: 1;
         }
 
+         /* Mise en page du menu */
+
         nav.main-nav {
             background: var(--nav-pink);
             padding: 6px 15px;
@@ -172,6 +176,8 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+         /* Page d'accueil */
 
         .container {
             display: grid;
@@ -578,6 +584,35 @@
             opacity: 0.9;
             color: yellow;
         }
+
+        /* Page des thèses */
+
+        .section-these {
+                background: #fff0f5;
+                padding: 15px;
+                border: 2px solid #ff99cc;
+                box-shadow: 5px 5px 0 #ff99cc;
+                margin-bottom: 20px;
+                width: 100%;
+                box-sizing: border-box;
+                grid-column: 1 / -1;
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+        .symbole img {
+                width: 40px;
+                margin-top: 10px;
+            }
+
+        .infos-these h2 {
+                font-family: 'Anton', sans-serif;
+                font-size: 40px;
+                margin: 0;
+            }
+
+        /* Mise en page du footer */
 
         footer {
             background: var(--nav-pink);
