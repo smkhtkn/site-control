@@ -12,8 +12,8 @@
             margin: 0;
             padding: 0;
             background-color: var(--bg-pink);
-            background-image: linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
-            background-size: 100% 3px;
+            background-image: url('images/stars-sparkles.gif');
+            background-repeat: repeat;
             font-family: 'Verdana', 'Arial', sans-serif;
             font-size: 11px;
             color: var(--text-dark);
@@ -38,6 +38,8 @@
             border-left: 2px solid #fff;
             border-right: 2px solid #fff;
         }
+
+        /* Mise en page du Header (l'en-tête du site) */
 
         header {
             background: linear-gradient(to bottom, #ffccdd, #ff99cc);
@@ -110,6 +112,8 @@
             z-index: 1;
         }
 
+         /* Mise en page du menu */
+
         nav.main-nav {
             background: var(--nav-pink);
             padding: 6px 15px;
@@ -172,6 +176,8 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+         /* Page d'accueil */
 
         .container {
             display: grid;
@@ -438,14 +444,17 @@
             border-top: 1px solid #999;
         }
 
+        .alerte {
+            border: 5px dashed #ff0090 !important;
+            background: #fff800 !important;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1) !important;
+        }
+
         .fake-ad-sms {
             margin-top: 20px;
-            border: 3px dashed #ff0090;
-            background: #fff800;
             padding: 10px;
             text-align: center;
             font-family: 'Arial', sans-serif;
-            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
         }
 
         .fake-ad-sms h3 {
@@ -578,6 +587,41 @@
             opacity: 0.9;
             color: yellow;
         }
+
+        /* Page des thèses */
+
+        .section-these {
+                background: #fff0f5;
+                padding: 15px;
+                border: 3px solid #ff99cc;
+                box-shadow: 5px 5px 0 #ff99cc;
+                margin: 15px 0px 20px 0px;
+                width: 100%;
+                box-sizing: border-box;
+                grid-column: 1 / -1;
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+        .symbole img {
+                width: 40px;
+                margin-top: 10px;
+            }
+
+        .infos-these h2 {
+                font-family: 'Anton', sans-serif;
+                font-size: 40px;
+                margin: 0;
+            }
+        
+        .infos-these p {
+                font-size: 14px;
+                line-height: 1.5;
+                margin-top: 10px;
+            }
+
+        /* Mise en page du footer */
 
         footer {
             background: var(--nav-pink);
