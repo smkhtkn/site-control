@@ -1,3 +1,31 @@
+        /* Caractères de police */
+        
+        @font-face {
+            font-family: 'Anton';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/Anton_latin.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Permanent Marker';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/PermanentMarker_latin.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/Verdana_latin.woff2') format('woff2');
+        }
+
+        /* Définition des couleurs */
+
         :root {
             --bg-pink: #ffb6c1;
             --header-pink: #ff99cc;
@@ -7,6 +35,8 @@
             --text-dark: #333333;
             --yellow-btn: #fff000;
         }
+
+        /* Body */
 
         body {
             margin: 0;
