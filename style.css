@@ -1,5 +1,5 @@
 /* ============================================================
-   GLAM & ARCHIVES - Feuille de style principale
+   GLAM & ARCHIVES - Feuille style principale
    ============================================================ */
 
 /* ============================================================
@@ -54,8 +54,11 @@
 
 body {
     margin: 0;
-    background: var(--light-pink) url('images/stars-sparkles.gif');
-    font: 11px 'Verdana', Arial, sans-serif;
+    padding: 0;
+    background: var(--light-pink) url('images/stars-sparkles.gif'); /* --- il s'agit de l'image en fond que nous définissons.Nous avons creer un dossier séparé pour tous les images --- */
+    background-repeat: repeat;
+    font-family: 'Verdana', 'Arial', sans-serif;
+    font-size: 11px;
     color: var(--text-dark);
 }
 
@@ -83,8 +86,8 @@ a:hover {
 /* --- Header (en-tête du site) --- */
 
 header {
-    background: linear-gradient(var(--light-pink), var(--header-pink));
-    padding: 15px 20px 10px;
+    background: linear-gradient(to bottom, var(--light-pink), var(--header-pink));
+    padding: 15px 20px 10px 20px;
     position: relative;
     border-bottom: 4px solid var(--title-pink);
 }
@@ -828,6 +831,7 @@ aside {
 .description-galerie h2 {
     font-family: 'Anton', sans-serif;
     font-size: 40px;
+    text-align: center;
 }
 
 /* --- Galerie des professeurs --- */
@@ -840,13 +844,12 @@ aside {
     grid-column: 1 / -1;
 }
 
-.prof-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.prof-card { /* ---Gestion des encadrements de la galerie photo j'ai ajouté  --- */
+    border: 3px solid var(--hot-pink); /* --- des bordures roses ici --- */
     padding: 15px;
-    text-align: center;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px var(--black);
+    text-align: center;/* --- l'alignement du texte --- */
+    background-color: var(--white);
+    box-shadow: 3px 2px 0px var(--hot-pink);
 }
 
 .prof-card img {
@@ -859,11 +862,14 @@ aside {
 
 .prof-card h3 {
     margin: 10px 0;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton', sans-serif; 
+    font-size: 20px;
+    color:var(--hot-pink);
 }
 
 .prof-card p {
     margin: 5px 0;
+    font-size: 14px;
 }
 
 .fun-phrase {
@@ -885,10 +891,9 @@ aside {
 .ranking-item {
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 3px solid var(--hot-pink);
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color:var(--white);
 }
 
 .ranking-item img {
@@ -901,7 +906,10 @@ aside {
 
 .ranking-details h4 {
     margin: 0;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 18px;
+    color: var(--hot-pink);
+    
 }
 
 .ranking-details p {
