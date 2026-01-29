@@ -6,12 +6,15 @@
    1. POLICES DE CARACTÈRES
    ============================================================ */
 
+/* Nous chargeons trois polices de Google Fonts, mais localement,
+    car au début des années 2000, c'était la seule façon de le faire */
+
 @font-face {
-    font-family: 'Anton';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('fonts/Anton_latin.woff2') format('woff2');
+     font-family: 'Anton';
+     font-style: normal;
+     font-weight: 400;
+     font-display: swap;
+     src: url('fonts/Anton_latin.woff2') format('woff2');
 }
 
 @font-face {
