@@ -764,8 +764,16 @@ aside {
 }
 
 .pub {
-    display: flex;
     grid-column: 1 / -1;
+}
+
+.pub h2 {
+    font-family: 'Permanent Marker', cursive; 
+    text-align: center;
+    font-size: 44px;
+    margin: 10px;
+    color: var(--red);
+    transform: rotate(1deg);
 }
 
 .pub a {
