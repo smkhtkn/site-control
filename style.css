@@ -144,17 +144,6 @@ h1.logo span.enc {
     text-shadow: 1px 1px 0 var(--white);
 }
 
-.cartoon-char {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    width: 140px;
-    height: 120px;
-    background: url('https://via.placeholder.com/140x120/ffccdd/ff0090?text=GOSSIP+PROFS') no-repeat center;
-    transform: rotate(5deg);
-    z-index: 1;
-}
-
 /* --- Navigation principale --- */
 
 nav.main-nav {
@@ -367,8 +356,7 @@ aside {
 /* --- Boutons de la sidebar --- */
 
 .left-btn {
-    width: 100%;
-    margin-bottom: 15px;
+    margin: 15px;
     border: 2px solid var(--black);
     border-radius: 5px;
     background: var(--white);
