@@ -31,13 +31,12 @@
             --header-pink: #ff99cc;
             --hot-pink: #ff0090;
             --nav-pink: #ff1493;
-            --link-red: #cc0000;
             --text-dark: #333333;
             --yellow-btn: #fff000;
             --white: #ffffff;
             --black: #000000;
             --yellow: #ffff00;
-            --red: #ff0000;
+            --red: #cc0000;
         }
 
         /* Body */
@@ -54,7 +53,7 @@
         }
 
         a {
-            color: var(--link-red);
+            color: var(--red);
             text-decoration: underline;
             cursor: pointer;
         }
@@ -227,7 +226,7 @@
 
         .sidebar-header {
             font-family: 'Permanent Marker', cursive;
-            color: var(--link-red);
+            color: var(--red);
             font-size: 20px;
             text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
             margin-bottom: 5px;
@@ -326,10 +325,10 @@
 
         .breadcrumb {
             font-size: 10px;
-            color: var(--link-red);
+            color: var(--red);
             font-weight: bold;
             margin-bottom: 15px;
-            border-bottom: 1px dotted var(--link-red);
+            border-bottom: 1px dotted var(--red);
             padding-bottom: 5px;
         }
 
@@ -394,7 +393,7 @@
         .post-body {
             font-size: 13px;
             line-height: 1.5;
-            color: #333;
+            color: var(--text-dark);
         }
 
         .post-body p {
@@ -418,7 +417,7 @@
         .tags-footer {
             margin-top: 15px;
             font-size: 10px;
-            color: var(--link-red);
+            color: var(--red);
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -790,7 +789,7 @@
         /* Posts spéciaux */
 
         .post-alerte {
-            border: 3px solid red;
+            border: 3px solid var(--red);
             background: var(--white);
         }
 
@@ -843,9 +842,9 @@
         .book-title {
             font-weight: bold;
             font-size: 14px;
-            color: var(--link-red);
+            color: var(--red);
             font-family: 'Arial Black', sans-serif;
-            border: 1px dotted red;
+            border: 1px dotted var(--red);
             padding: 5px;
         }
 
@@ -865,7 +864,7 @@
         .controls-progress-bar {
             width: 20%;
             height: 100%;
-            background: var(--link-red);
+            background: var(--red);
         }
 
         .controls-time {
