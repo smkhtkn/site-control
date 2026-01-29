@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam & Archives — Le site le plus Chartiste du Web !</title>
+    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div class="top-bar">
             <div class="logo-area">
                 <div class="welcome-text">Bienvenue sur</div>
-                <h1 class="logo">GLAM & ARCHIVES<span class="enc">.ENC</span></h1>
+                <h1 class="logo">GLAM & GOSSIP<span class="enc">.ENC</span></h1>
             </div>
         </div>
         <div class="slogan">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
@@ -27,8 +27,11 @@
             <a href="theses.html">Thèses Scandales</a>
         </div>
         <div class="search-box">
-            <input type="text" placeholder="Rechercher un prof..." size="20">
-            <button>SEARCH!</button>
+            <form action="https://www.google.com/search" method="get">
+                <input type="hidden" name="tbs" value="cdr:1,cd_min:1/1/2006,cd_max:12/31/2006">
+                <input type="text" name="q" placeholder="Rechercher..." size="20">
+                <button type="submit">SEARCH!</button>
+            </form>
         </div>
     </nav>
 
@@ -44,14 +47,14 @@
         <aside class="left-col">
             <div class="sidebar-header">BIENVENUE</div>
             <div class="intro-text">
-                Bienvenue sur Glam & Archives - Le seul site où la diplomatique rencontre le drama !
+                Bienvenue sur Glam & Gossip - Le seul site où la diplomatique rencontre le drama !
             </div>
 
             <div class="sidebar-header sidebar-header-scoops">ENVOYEZ VOS SCOOPS !</div>
             <div class="intro-text">
                 Un document mal coté ?<br>
                 Une rumeur à l'ENC ?<br>
-                <a href="#" class="email-link">Gossip@aol.com</a>
+                <a href="#" class="email-link">gossip@aol.com</a>
             </div>
 
             <div class="top-celebs-widget shadow">
@@ -215,8 +218,8 @@
     </div> 
 
     <footer>
-        COPYRIGHT © 2006-2024 GLAM & ARCHIVES INC. <br> 
-        Site parodique réalisé pour l'amour de la Chartes. XOXO.
+        COPYRIGHT © 2006-2024 GLAM & GOSSIP INC. <br> 
+        Site parodique réalisé pour l'amour de l'ENC et du drama XOXO.
     </footer>
 
 </div>
