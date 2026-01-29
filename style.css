@@ -80,6 +80,7 @@ a {
     cursor: pointer;
 }
 
+/* Effet au survol : fond jaune et texte noir pour rendre les liens plus visibles */
 a:hover {
     background-color: var(--yellow);
     color: var(--black);
