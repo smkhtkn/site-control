@@ -800,8 +800,8 @@ aside {
 }
 
 .description-galerie h2 {
-    font-family: 'Anton', sans-serif; /* --- police du titre 
-    font-size: 40px; /* ---taille de la police --- */
+    font-family: 'Anton', sans-serif; /* --- police du titre */
+    font-size: 65px;/* ---taille de la police --- */
     text-align: center; /* --- centrage du titre --- */
 }
 
@@ -849,7 +849,7 @@ aside {
 /* --- Classement (section du top 5) --- */
 /* --- Sous-titre du classement --- */
 .ranking-subtitle {
-    font-size: 14px;/* --- taille du sous titre --- */
+    font-size: 18px;/* --- taille du sous titre --- */
     color: rgb(85, 85, 85); /* --- couleur grise --- */
     margin-bottom: 20px; /* --- espacement sous le texte --- */
     text-align: center; /* --- texte centré --- */
