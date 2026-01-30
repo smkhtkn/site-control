@@ -778,7 +778,6 @@ aside {
 }
 /* --- Informations sur les thèses --- */
 .infos-these h2 {
-.infos-these h2 {
     font-family: 'Anton', sans-serif; /* police d'écriture*/
     font-size: 40px;/* --- taille du titre --- */
     margin: 0; /* --- pas de marge --- */
@@ -797,11 +796,11 @@ aside {
 /* --- Description de la galerie --- */
 
 .description-galerie {
-    grid-column: 1 / -1; /* --- le bloc s'étend sur toutes les colonnes de la grille principale --- */
+    grid-column: 1 / -1;
 }
 
 .description-galerie h2 {
-    font-family: 'Anton', sans-serif; /* --- police du titre
+    font-family: 'Anton', sans-serif; /* --- police du titre 
     font-size: 40px; /* ---taille de la police --- */
     text-align: center; /* --- centrage du titre --- */
 }
