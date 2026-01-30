@@ -1,57 +1,59 @@
-<!DOCTYPE html> 
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!DOCTYPE html>     <!-- indique au navigateur le format du fichier html5-->
+<html lang="fr">    <!-- la balise racine qui présente avec l'attribut langue que la langue du contenu est en français-->
+<head>  <!-- contient des informations sur la page qui ne sont pas visibles par l'utilisateur-->
+    <meta charset="UTF-8">  <!--Pour l'encodages des caractères pour éviter les problèmes d'affichage des caractères spéciaux-->
+    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title> <!-- Titre de la page  -->
+    <link rel="stylesheet" href="style.css"> <!--lien vers la feuille de style externe css-->
+</head><!-- fermeture de la balise head-->
 
-<div class="page-wrapper shadow">
-    <header>
-        <div class="cartoon-char"></div>
-        <div class="top-bar">
-            <div class="logo-area">
-                <div class="welcome-text">Bienvenue sur</div>
-                <h1 class="logo">GLAM & GOSSIP<span class="enc">.ENC</span></h1>
-            </div>
-        </div>
-        <div class="slogan">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
-    </header>
+<body><!-- début du contenu visible de la page-->
 
-    <nav class="main-nav">
-        <div class="nav-links">
+<div class="page-wrapper shadow"> <!-- Conteneur principal de la page, classe pour style et ombre -->
+    
+    <header>  <!-- En-tête du site contenant le logo et le slogan -->
+        <div class="cartoon-char"></div> <!-- Élément décoratif -->
+        <div class="top-bar"> <!-- pour  insérer la barre supérieure contenant le logo  -->
+            <div class="logo-area"> <!-- Zone du logo et du titre -->
+                <div class="welcome-text">Bienvenue sur</div> <!--POur insérer le texte de bienvenue-->
+                <h1 class="logo">GLAM & GOSSIP<span class="enc">.ENC</span></h1> <!-- Titre principal avec span décoratif -->
+            </div> <!-- Fin logo-area -->
+        </div> <!-- Fin top-bar -->
+        <div class="slogan">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div> <!-- insertion du slognan du site -->
+    </header> <!-- fin de l'en-tête -->
+
+    <nav class="main-nav">  <!-- Navigation principale -->
+        <div class="nav-links"> <!-- conteneur des liens de navigation -->
             <a href="index.html">Accueil</a>
             <a href="photos.html">Photos</a>
             <a href="theses.html">Thèses Scandales</a>
-        </div>
-        <div class="search-box">
-            <input type="text" placeholder="Rechercher un prof..." size="20">
-            <button>SEARCH!</button>
-        </div>
-    </nav>
+            <!-- les lien vers les différentes pages du site:accueil,photos,thèses-->
+        </div> <!-- fin nav-links -->
+        <div class="search-box"> <!-- pour la zone de recherche -->
+            <input type="text" placeholder="Rechercher un prof..." size="20"> <!--zone de saisie pour la recherche-->
+            <button>SEARCH!</button> <!-- bouton de recherche-->
+        </div> <!--fin search-box-->
+    </nav>   <!--fin nav-->
 
-    <div class="buzz-banner">
-        <marquee scrollamount="6" scrolldelay="60">
+    <div class="buzz-banner"> <!-- pour l'insertion du bandeau d'actualité défilant -->
+        <marquee scrollamount="6" scrolldelay="60"> <!-- pour faire défiler le texte -->
             🚨 ALERTE ROUGE À LA BNF : UN INCUNABLE DISPARU ?! • PANIQUE AUX ARCHIVES NATIONALES : PLUS DE PLACE DANS LES RAYONNAGES ! • QUI A VOLÉ LE TAMPON ENCREUR DE LA SALLE LABROUSTE ? • FLASH SPÉCIAL : LA MACHINE À CAFÉ DU 65 RUE DE RICHELIEU EST EN PANNE ! 🚨
         </marquee>
     </div>
 
 
-<div class="container">
+<div class="container"> <!-- conteneur principal du contenu de la page photos-->
             <!-- Première rubrique : Galerie des professeurs -->
-    <div class="description-galerie">
-            <h2>GALERIE DES PROFESSEURS</h2>
-            <p class="ranking-subtitle"> Découvrez nos profs: leurs visages,leurs matières et leurs petites phrases qui font sourire !</p>
+    <div class="description-galerie"> <!-- section de description de la galerie des professeurs -->
+            <h2>GALERIE DES PROFESSEURS</h2> <!-- titre de la rubrique -->
+            <p class="ranking-subtitle"> Découvrez nos profs: leurs visages,leurs matières et leurs petites phrases qui font sourire !</p> <!-- paragraphe d'introduction de la rubrique -->
     </div>
 
-    <div class="prof-gallery">
-        <div class="prof-card">
-            <img src="images/photo_canteaut.jpeg" alt="Olivier Canteaut">
-            <h3>Olivier Canteaut</h3>
-            <p><strong>Matière :</strong> Paleographie</p>
-            <p class="fun-phrase">"Lis plus vite les manuscrits médiévaux que nos propres notes!!!"</p>
+    <div class="prof-gallery"> <!--conteneur qui contient toutes les photos des professeurs-->
+        <div class="prof-card"> <!-- photo individuelle du professeur-->
+            <img src="images/photo_canteaut.jpeg" alt="Olivier Canteaut"> <!-- usage balise img pour insérer la photo avec attribut alt pour l'accessibilité-->
+            <h3>Olivier Canteaut</h3> <!-- titre pour le nom su professeur-->
+            <p><strong>Matière :</strong> Paleographie</p><!-- insertion de la matière en gras-->
+            <p class="fun-phrase">"Lis plus vite les manuscrits médiévaux que nos propres notes!!!"</p> <!-- insérer la phrase amusante associée à chaque professeur avec une classe pour le style-->
         </div>
         <div class="prof-card">
             <img src="images/photo_benevent.jpeg" alt="Christine Benevent">
@@ -95,20 +97,22 @@
             <p><strong>Matière :</strong> Histoire du droit civique et du droit canonique </p>
             <p class="fun-phrase">"Connait les règles meme celles qu'on n'a jamais lues!!!"</p>
         </div>
+            <!-- la présentation de chaque professeur avec sa photo,son nom,sa matière et une phrase amusante associée (pareil que le commentaire concernant le premier professeur) -->
+        
     </div>
 
     <!-- Deuxième Rubrique : Classement des photos -->
     <div class="description-galerie">
-    <h2>CLASSEMENT DES PHOTOS-EDITION 2005</h2> <!-- Titre -->
-    <p class="ranking-subtitle"> Hello!!!! voici le top 5 des clichés  les plus vus et commentés ceux qui font le buzz dans les couloirs !!!!!</p>
+    <h2>CLASSEMENT DES PHOTOS-EDITION 2005</h2> <!-- Titre de la rubrique classement des photos -->
+    <p class="ranking-subtitle"> Hello!!!! voici le top 5 des clichés  les plus vus et commentés ceux qui font le buzz dans les couloirs !!!!!</p>  <!-- description du clasement -->
     </div>
 
-    <div class="prof-gallery">
-        <div class="ranking-item">
-            <img src="images/photo_canteaut.jpeg" alt="Olivier Canteaut">
-            <div class="ranking-details">
-                <h4>Olivier Canteaut</h4>
-                <p>Vues : 2500 | Commentaires : 350</p>
+    <div class="prof-gallery"> <!-- conteneur qui contient les photos pour le classement -->
+        <div class="ranking-item"> <!-- l'élément individuel du classement -->
+            <img src="images/photo_canteaut.jpeg" alt="Olivier Canteaut"> <!-- photo du professeur -->
+            <div class="ranking-details"> <!-- conteneur pour les détails du classement -->
+                <h4>Olivier Canteaut</h4> <!-- nom du professeur -->
+                <p>Vues : 2500 | Commentaires : 350</p> <!-- statistiques de vues et commentaires -->
             </div>
         </div>
         <div class="ranking-item">
@@ -138,20 +142,21 @@
                 <h4>Olivier Guyotjeannin</h4>
                 <p>Vues : 1200 | Commentaires : 150</p>
             </div>
+<!-- les autres éléments du classement suivent la même structure que le premier -->
         </div>
-</div>
+</div> 
     
 
 
-
 </div>
 
 
-    <footer>
+    <footer> <!-- pied de page de page --> 
         COPYRIGHT © 2006-2024 GLAM & ARCHIVES INC. <br> 
         Site parodique réalisé pour l'amour de la Chartes. XOXO.
     </footer>
 
-</div>
+</div> 
 </body>
-</html>
+</html> <!-- fin du document html-->
+           
