@@ -727,58 +727,67 @@ aside {
 
 /* ============================================================
    4. PAGE DES THÈSES (theses.html)
-   ============================================================ */
+  ============================================================ */
 
+/* ---conteneur de la section des thèses --- */
 .section-these {
-    background: rgb(255, 255, 255);
-    padding: 15px;
-    border: 3px solid rgb(255, 153, 204);
-    box-shadow: 5px 5px 0 rgb(255, 153, 204);
-    margin: 15px 0 20px 0;
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
+    display: grid; /* ---utilisation du css grid pour organiser le contenu --- */
+    grid-template-columns: 1fr 2fr; /* ---diviser en deux colonnes respectives --- */
+    gap: 15px;/* ---espacements entre les colonnes et les lignes --- */
+    padding: 15px;/* ---espacement interne de l'encadrement du conteneur --- */
 }
-
-.pub {
-    grid-column: 1 / -1;
+/* ---définition du style du container des thèses --- */
+.section-these {
+    background: rgb(255, 255, 255);/* ---fond blanc --- */
+    padding: 15px;/* ---espace intérieur --- */
+    border: 3px solid rgb(255, 153, 204); /* ---bordure rose --- */
+    box-shadow: 5px 5px 0 rgb(255, 153, 204);/* ---ombre rose --- */
+    margin: 15px 0 20px 0; /* ---marge extérieure haut et bas --- */
+    grid-column: 1 / -1; /* ---le bloc s'étend sur toutes les colonnes de la grille principale --- */
+    display: flex; /* ---utilisation de flexbox pour organiser le contenu interne --- */
+    align-items: flex-start; /* ---alignement des éléments en haut --- */
+    gap: 15px;/* ---espacement entre les éléments --- */
+}
+/* ---section publicité thèses --- */
+.pub { 
+    grid-column: 1 / -1; /* ---le bloc s'étend sur toutes les colonnes de la grille principale --- */
 }
 
 .pub h2 {
-    font-family: 'Permanent Marker', cursive; 
-    text-align: center;
-    font-size: 44px;
-    margin: 10px;
-    color: rgb(204, 0, 0);
-    transform: rotate(1deg);
+    font-family: 'Permanent Marker', cursive; /* --police d'écriture manuscrite --- */
+    text-align: center; /* ---centrage du titre */
+    font-size: 44px;/* ---taille du texte --- */
+    margin: 10px; /* ---marge autour du titre --- */
+    color: rgb(204, 0, 0);/* ---couleur rose du texte --- */
+    transform: rotate(1deg);/* --légère rotation du titre --- */
 }
 
 .pub a {
-    display: block;
-    width: 100%;
+    display: block;/* ---le lien occupe toute la largeur --- */
+    width: 100%; /* ---la largeur maximale --- */
 }
 
 .pub img {
-    width: 100%;
-    display: block;
+    width: 100%; /* ---l'image occupe toute la largeur du conteneur --- */
+    display: block; /*--- affichage en bloc pour éviter les espaces indésirables --- */
 }
-
+/* --- Symbole (petite icône) --- */
 .symbole img {
-    width: 40px;
-    margin-top: 10px;
+    width: 40px; /* ---largeur de l'icône --- */
+    margin-top: 10px; /* --- espacemenent au dessus de l'icône --- */
 }
-
+/* --- Informations sur les thèses --- */
 .infos-these h2 {
-    font-family: 'Anton', sans-serif;
-    font-size: 40px;
-    margin: 0;
+.infos-these h2 {
+    font-family: 'Anton', sans-serif; /* police d'écriture*/
+    font-size: 40px;/* --- taille du titre --- */
+    margin: 0; /* --- pas de marge --- */
 }
 
 .infos-these p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: 10px;
+    font-size: 14px; /* ---taille du texte */
+    line-height: 1.5; /* --- interligne pour une meilleure lisibilité --- */
+    margin-top: 10px;/* --- espace au-dessus du paragraphe --- */
 }
 
 /* ============================================================
@@ -788,95 +797,106 @@ aside {
 /* --- Description de la galerie --- */
 
 .description-galerie {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* --- le bloc s'étend sur toutes les colonnes de la grille principale --- */
 }
 
 .description-galerie h2 {
-    font-family: 'Anton', sans-serif;
-    font-size: 40px;
-    text-align: center;
+    font-family: 'Anton', sans-serif; /* --- police du titre
+    font-size: 40px; /* ---taille de la police --- */
+    text-align: center; /* --- centrage du titre --- */
 }
 
 /* --- Galerie des professeurs --- */
-
 .prof-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    grid-column: 1 / -1;
+    display: grid; /* --- utilisation du CSS Grid pour organiser la galerie --- */
+    grid-template-columns: repeat(3, 1fr);/* --- trois colonnes de largeur égale --- */
+    gap: 20px; /* --- espacement entre les cadres--- */ 
+    padding: 20px; /* --- espace intérieur du conteneur--- */
+    grid-column: 1 / -1; /* --- la galerie occupe toute la largeur --- */
 }
-
-.prof-card { /* ---Gestion des encadrements de la galerie photo j'ai ajouté  --- */
-    border: 3px solid rgb(255, 20, 147); /* --- des bordures roses ici --- */
-    padding: 15px;
-    text-align: center;/* --- l'alignement du texte --- */
-    background-color: rgb(255, 255, 255);
-    box-shadow: 3px 2px 0px rgb(255, 20, 147);
-}
-
+/* ---Gestion des encadrements de la galerie photo  --- */
+.prof-card { 
+    border: 3px solid rgb(255, 20, 147); /* --- des bordures roses --- */
+    padding: 15px; /* --- espacement interieur --- */
+    text-align: center;/* --- l'alignement du texte: centré --- */
+    background-color: rgb(255, 255, 255); /* ---fond blanc --- */
+    box-shadow: 3px 2px 0px rgb(255, 20, 147);/* --- ombre décorative rose --- */
+}                   
 .prof-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 100%; /* --- l'image occupe toute la largeur de la carte --- */
+    height: 250px; /* --- hauteur fixe pour uniformité --- */
+    object-fit: cover; /* --- recadrage sans déformation --- */
+    border-radius: 5px; /* ---arrondissement des coins --- */
+    margin-bottom: 10px; /* --- espace sous l'image --- */
 }
 
 .prof-card h3 {
-    margin: 10px 0;
-    font-family: 'Anton', sans-serif; 
-    font-size: 20px;
-    color:rgb(255, 20, 147);
+    margin: 10px 0; /* --- marge verticale --- */
+    font-family: 'Anton', sans-serif;  /* --- police du nom --- */
+    font-size: 20px;/* --- taille de la police --- */
+    color:rgb(255, 20, 147); /* --- Couleur rose --- */
 }
 
 .prof-card p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 5px 0; /* --- espacement entre les paragraphes --- */
+    font-size: 14px; /* --- taille du texte --- */
 }
 
 .fun-phrase {
-    font-style: italic;
-    color: rgb(85, 85, 85);
+    font-style: italic;/* --- texte en italique --- */
+    color: rgb(85, 85, 85); /* --- Couleur grise pour le texte de la phrase amusante -- */
 }
 
-/* --- Classement --- */
-
+/* --- Classement (section du top 5) --- */
+/* --- Sous-titre du classement --- */
 .ranking-subtitle {
-    font-size: 14px;
-    color: rgb(85, 85, 85);
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 14px;/* --- taille du sous titre --- */
+    color: rgb(85, 85, 85); /* --- couleur grise --- */
+    margin-bottom: 20px; /* --- espacement sous le texte --- */
+    text-align: center; /* --- texte centré --- */
+    font-weight: bold; /* ---texte en gras --- */
+    text-transform: uppercase; /* --- texte en majuscules --- */
 }
 
+/* --- Élément individuel du classement --- */
 .ranking-item {
-    display: flex;
-    align-items: center;
-    border: 3px solid rgb(255, 20, 147);
+    display: flex; 
+/* --- alignement horizontal image et texte --- */
+    align-items: center; 
+/* --- alignement vertical centré --- */
+    border: 3px solid rgb(255, 20, 147); 
+/* --- bordure rose --- */
+    margin-bottom: 15px;
     padding: 10px;
-    background-color:rgb(255, 255, 255);
+/* --- espace intérieur --- */
+    background-color:rgb(255, 255, 255); 
+/* --- fond blanc --- */
+    box-shadow: 3px 2px 0px rgb(255, 20, 147);
 }
 
 .ranking-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 15px;
+    width: 80px; 
+/* --- largeur des images--- */
+    height: 80px; 
+/* --- hauteur des images --- */
+    object-fit: cover; 
+/* --- recadrage sans déformation --- */
+    border-radius: 5px; 
+/* --- coins arrondis --- */
+    margin-right: 15px; 
+/* ---espacement avant le texte --- */
 }
-
+/* --- Détails du classement --- */
 .ranking-details h4 {
-    margin: 0;
-    font-family: 'Permanent Marker', sans-serif;
-    font-size: 18px;
-    color: rgb(255, 20, 147);
+    margin: 0; /* --- pas de marge --- */
+    font-family: 'Permanent Marker', sans-serif; /* --police manuscrite --- */
+    font-size: 18px; /* --- taille de la police --- */
+    color: rgb(255, 20, 147); /* --- couleur rose --- */
     
 }
 
 .ranking-details p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: rgb(85, 85, 85);
+    margin: 5px 0; /* --- espacement vertical --- */
+    font-size: 14px; /* --- taille du texte --- */
+    color: rgb(85, 85, 85); /* --- couleur grise --- */
 }
