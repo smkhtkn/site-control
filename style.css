@@ -1,8 +1,8 @@
 /* ============================================================
-   GLAM & ARCHIVES - Feuille style principale
+   GLAM & ARCHIVES - Feuille de style principale
    ============================================================ */
 
-/* ============================================================
+/* ==+++++==========================================================
    1. POLICES DE CARACTÈRES
    ============================================================ */
 
@@ -25,29 +25,7 @@
 }
 
 /* ============================================================
-   2. VARIABLES DE COULEURS
-   Grâce à cela, nous définissons les couleurs standard 
-   et pouvons les modifier en un seul clic
-   ============================================================ */
-
-:root {
-    --bg-pink: #ffe6f0;
-    --light-pink: #ffccdd;
-    --header-pink: #ff99cc;
-    --title-pink: #ff3399;
-    --hot-pink: #ff1493;
-    --accent-pink: #b30059;
-    --gray: #555555;
-    --text-dark: #333333;
-    --black: #000000;
-    --black-rgb: 0 0 0; /* Variation RGB pour le noir afin de créer des ombres */
-    --white: #ffffff;
-    --yellow: #fff000;
-    --red: #cc0000;
-}
-
-/* ============================================================
-   3. STYLES DE BASE (COMMUNS À TOUTES LES PAGES)
+   2. STYLES DE BASE (COMMUNS À TOUTES LES PAGES)
    ============================================================ */
 
 /* --- Body --- */
@@ -55,24 +33,24 @@
 body {
     margin: 0;
     padding: 0;
-    background: var(--light-pink) url('images/stars-sparkles.gif'); /* --- il s'agit de l'image en fond que nous définissons.Nous avons creer un dossier séparé pour tous les images --- */
+    background: rgb(255, 204, 221) url('images/stars-sparkles.gif'); /* --- il s'agit de l'image en fond que nous définissons.Nous avons creer un dossier séparé pour tous les images --- */
     background-repeat: repeat;
     font-family: 'Verdana', 'Arial', sans-serif;
     font-size: 11px;
-    color: var(--text-dark);
+    color: rgb(51, 51, 51);
 }
 
 /* --- Liens --- */
 
 a {
-    color: var(--red);
+    color: rgb(204, 0, 0);
     text-decoration: underline;
 }
 
 /* Effet au survol : fond jaune et texte noir pour rendre les liens plus visibles */
 a:hover {
-    background-color: var(--yellow);
-    color: var(--black);
+    background-color: rgb(255, 240, 0);
+    color: rgb(0, 0, 0);
 }
 
 /* --- Conteneur principal --- */
@@ -80,16 +58,16 @@ a:hover {
 .page-wrapper {
     width: 1000px;
     margin: 0 auto;
-    background: var(--white);
+    background: rgb(255, 255, 255);
 }
 
 /* --- Header (en-tête du site) --- */
 
 header {
-    background: linear-gradient(to bottom, var(--light-pink), var(--header-pink));
+    background: linear-gradient(to bottom, rgb(255, 204, 221), rgb(255, 153, 204));
     padding: 15px 20px 10px 20px;
     position: relative;
-    border-bottom: 4px solid var(--title-pink);
+    border-bottom: 4px solid rgb(255, 51, 153);
 }
 
 .top-bar {
@@ -106,7 +84,7 @@ header {
 .welcome-text {
     font-size: 14px;
     font-weight: bold;
-    color: var(--gray);
+    color: rgb(85, 85, 85);
     margin-bottom: -15px;
     margin-left: 5px;
     font-family: 'Permanent Marker', cursive;
@@ -118,16 +96,16 @@ h1.logo {
     font-size: 82px;
     margin: 0;
     line-height: 0.9;
-    color: var(--title-pink);
+    color: rgb(255, 51, 153);
     text-transform: uppercase;
-    text-shadow: 3px 3px 0px var(--white), -2px -2px 0 var(--white), 2px -2px 0 var(--white), -2px 2px 0 var(--white), 2px 2px 0 var(--white), 5px 5px 0px var(--black);
+    text-shadow: 3px 3px 0px rgb(255, 255, 255), -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255), 2px 2px 0 rgb(255, 255, 255), 5px 5px 0px rgb(0, 0, 0);
     letter-spacing: -3px;
 }
 
 h1.logo span.enc {
     font-size: 30px;
-    color: var(--white);
-    text-shadow: 2px 2px 0 var(--hot-pink);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0 rgb(255, 20, 147);
     vertical-align: top;
     margin-top: 15px;
     display: inline-block;
@@ -137,30 +115,30 @@ h1.logo span.enc {
 .slogan {
     font-family: 'Permanent Marker', cursive;
     font-size: 16px;
-    color: var(--gray);
+    color: rgb(85, 85, 85);
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
-    text-shadow: 1px 1px 0 var(--white);
+    text-shadow: 1px 1px 0 rgb(255, 255, 255);
 }
 
 /* --- Navigation principale --- */
 
 nav.main-nav {
-    background: var(--hot-pink);
+    background: rgb(255, 20, 147);
     padding: 6px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--white);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 12px;
-    border-top: 2px solid var(--white);
-    border-bottom: 2px solid var(--accent-pink);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(179, 0, 89);
 }
 
 .nav-links a {
-    color: var(--white);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 15px;
     text-transform: uppercase;
@@ -172,7 +150,7 @@ nav.main-nav {
 .nav-links a:hover {
     text-decoration: underline;
     background: none;
-    color: var(--yellow);
+    color: rgb(255, 240, 0);
 }
 
 .search-box {
@@ -182,13 +160,13 @@ nav.main-nav {
 }
 
 .search-box input {
-    border: 2px solid var(--accent-pink);
+    border: 2px solid rgb(179, 0, 89);
     padding: 3px;
     font-size: 11px;
 }
 
 .search-box button {
-    background: var(--yellow);
+    background: rgb(255, 240, 0);
     border: 2px solid #cca300;
     font-weight: bold;
     font-size: 11px;
@@ -200,10 +178,10 @@ nav.main-nav {
 /* --- Bandeau d'actualités (marquee) --- */
 
 .buzz-banner {
-    background: var(--bg-pink);
-    border-bottom: 2px solid var(--title-pink);
+    background: rgb(255, 230, 240);
+    border-bottom: 2px solid rgb(255, 51, 153);
     padding: 8px 0;
-    color: var(--accent-pink);
+    color: rgb(179, 0, 89);
     font-family: 'Verdana', sans-serif;
     font-weight: bold;
     font-size: 12px;
@@ -218,31 +196,31 @@ nav.main-nav {
     grid-template-columns: 180px 1fr 250px;
     gap: 15px;
     padding: 15px;
-    background: var(--bg-pink);
+    background: rgb(255, 230, 240);
 }
 
 /* --- Footer --- */
 
 footer {
-    background: var(--hot-pink);
-    color: var(--white);
+    background: rgb(255, 20, 147);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 15px;
     font-size: 10px;
     margin-top: 20px;
-    border-top: 4px solid var(--white);
+    border-top: 4px solid rgb(255, 255, 255);
     font-family: 'Verdana';
 }
 
 /* --- Classes utilitaires --- */
 
 .shadow {
-    box-shadow: 3px 3px 6px rgb(var(--black-rgb) / 0.4) !important;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4) !important;
 }
 
 .alerte {
-    border: 5px dashed var(--hot-pink) !important;
-    background: var(--yellow) !important;
+    border: 5px dashed rgb(255, 20, 147) !important;
+    background: rgb(255, 240, 0) !important;
 }
 
 @keyframes blink {
@@ -252,7 +230,7 @@ footer {
 }
 
 /* ============================================================
-   4. PAGE D'ACCUEIL (index.html)
+   3. PAGE D'ACCUEIL (index.html)
    ============================================================ */
 
 /* --- Sidebars (colonnes latérales) --- */
@@ -263,9 +241,9 @@ aside {
 
 .sidebar-header {
     font-family: 'Permanent Marker', cursive;
-    color: var(--red);
+    color: rgb(204, 0, 0);
     font-size: 20px;
-    text-shadow: 2px 2px 0px rgb(var(--black-rgb) / 0.2);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
     margin-bottom: 5px;
     line-height: 1.1;
     transform: rotate(-2deg);
@@ -286,7 +264,7 @@ aside {
 }
 
 .email-link {
-    color: var(--hot-pink);
+    color: rgb(255, 20, 147);
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -294,21 +272,21 @@ aside {
 /* --- Widget "Top Profs" --- */
 
 .top-celebs-widget {
-    background: var(--hot-pink);
+    background: rgb(255, 20, 147);
     border-radius: 8px;
     padding: 6px;
     text-align: center;
-    border: 3px solid var(--white);
+    border: 3px solid rgb(255, 255, 255);
     margin-bottom: 20px;
 }
 
 .widget-title-img {
-    color: var(--white);
+    color: rgb(255, 255, 255);
     font-family: 'Anton', sans-serif;
     font-size: 22px;
     text-transform: uppercase;
     margin-bottom: 8px;
-    text-shadow: 2px 2px 0 var(--accent-pink);
+    text-shadow: 2px 2px 0 rgb(179, 0, 89);
     line-height: 1;
 }
 
@@ -319,8 +297,8 @@ aside {
 }
 
 .celeb-item {
-    background: var(--black);
-    border: 1px solid var(--white);
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .celeb-item img {
@@ -336,8 +314,8 @@ aside {
 }
 
 .celeb-name {
-    background: var(--black);
-    color: var(--yellow);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 240, 0);
     font-size: 9px;
     text-transform: uppercase;
     padding: 3px 0;
@@ -349,17 +327,17 @@ aside {
     width: 100%;
     margin-top: 5px;
     font-size: 10px;
-    background: var(--white);
-    border: 1px solid var(--black);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 /* --- Boutons de la sidebar --- */
 
 .left-btn {
     margin: 15px;
-    border: 2px solid var(--black);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
-    background: var(--white);
+    background: rgb(255, 255, 255);
     padding: 2px;
     cursor: pointer;
 }
@@ -369,19 +347,19 @@ aside {
 }
 
 .btn-notes {
-    background: var(--header-pink);
+    background: rgb(255, 153, 204);
     padding: 10px;
     text-align: center;
     font-family: 'Anton', sans-serif;
     font-size: 18px;
-    color: var(--black);
+    color: rgb(0, 0, 0);
     transform: rotate(-1deg);
     text-decoration: none !important;
 }
 
 .btn-notes-highlight {
-    color: var(--white);
-    -webkit-text-stroke: 1px var(--black);
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
     font-size: 22px;
 }
 
@@ -389,10 +367,10 @@ aside {
 
 .breadcrumb {
     font-size: 10px;
-    color: var(--red);
+    color: rgb(204, 0, 0);
     font-weight: bold;
     margin-bottom: 15px;
-    border-bottom: 1px dotted var(--red);
+    border-bottom: 1px dotted rgb(204, 0, 0);
     padding-bottom: 5px;
 }
 
@@ -408,11 +386,11 @@ aside {
 /* --- Posts (articles) --- */
 
 .post {
-    background: var(--white);
+    background: rgb(255, 255, 255);
     margin-bottom: 35px;
     padding: 15px;
-    border: 1px solid #ffccdd;
-    box-shadow: 3px 3px 0 var(--header-pink);
+    border: 1px solid rgb(255, 204, 221);
+    box-shadow: 3px 3px 0 rgb(255, 153, 204);
     position: relative;
 }
 
@@ -421,7 +399,7 @@ aside {
     font-weight: 900;
     font-size: 24px;
     line-height: 1.1;
-    color: var(--black);
+    color: rgb(0, 0, 0);
     margin-top: 0;
     margin-bottom: 5px;
     letter-spacing: -1px;
@@ -429,17 +407,17 @@ aside {
 
 .post-headline a {
     text-decoration: none;
-    color: var(--black);
+    color: rgb(0, 0, 0);
 }
 
 .post-headline a:hover {
-    color: var(--hot-pink);
+    color: rgb(255, 20, 147);
     background: transparent;
 }
 
 .filed-under {
     font-size: 10px;
-    color: var(--gray);
+    color: rgb(85, 85, 85);
     margin-bottom: 12px;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
@@ -448,7 +426,7 @@ aside {
 .post-body {
     font-size: 13px;
     line-height: 1.5;
-    color: var(--text-dark);
+    color: rgb(51, 51, 51);
 }
 
 .post-body p {
@@ -456,23 +434,23 @@ aside {
 }
 
 .post-body a.keyword {
-    color: var(--hot-pink);
+    color: rgb(255, 20, 147);
     font-weight: bold;
     text-decoration: none;
-    background: var(--white);
+    background: rgb(255, 255, 255);
     padding: 0 2px;
 }
 
 .post-body a.keyword:hover {
     text-decoration: underline;
-    background: var(--yellow);
-    color: var(--red);
+    background: rgb(255, 240, 0);
+    color: rgb(204, 0, 0);
 }
 
 .tags-footer {
     margin-top: 15px;
     font-size: 10px;
-    color: var(--red);
+    color: rgb(204, 0, 0);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -480,35 +458,35 @@ aside {
 /* --- Posts spéciaux (alertes) --- */
 
 .post-alerte {
-    border: 3px solid var(--red);
+    border: 3px solid rgb(204, 0, 0);
 }
 
 .post-headline-alerte {
-    color: var(--red);
+    color: rgb(204, 0, 0);
     text-transform: uppercase;
     font-size: 26px;
 }
 
 .post-headline-alerte a {
-    color: var(--red);
+    color: rgb(204, 0, 0);
 }
 
 .post-image {
     width: 100%;
     display: block;
-    border: 2px solid var(--black);
+    border: 2px solid rgb(0, 0, 0);
     margin-bottom: 15px;
 }
 
 .post-image-vintage {
-    border: 3px solid var(--black);
+    border: 3px solid rgb(0, 0, 0);
     filter: sepia(50%) contrast(110%);
 }
 
 .post-quote {
     background: #ffecf5;
     padding: 10px;
-    border: 2px dashed var(--hot-pink);
+    border: 2px dashed rgb(255, 20, 147);
     font-style: italic;
 }
 
@@ -518,20 +496,20 @@ aside {
 }
 
 .post-cta {
-    color: var(--red);
+    color: rgb(204, 0, 0);
     font-size: 16px;
 }
 
 .post-cta-pink {
-    color: var(--hot-pink);
+    color: rgb(255, 20, 147);
 }
 
 .book-title {
     font-weight: bold;
     font-size: 14px;
-    color: var(--red);
+    color: rgb(204, 0, 0);
     font-family: 'Arial Black', sans-serif;
-    border: 1px dotted var(--red);
+    border: 1px dotted rgb(204, 0, 0);
     padding: 5px;
 }
 
@@ -540,21 +518,21 @@ aside {
 .video-player-container {
     width: 100%;
     height: 300px;
-    background: var(--black);
+    background: rgb(0, 0, 0);
     position: relative;
     margin-bottom: 15px;
-    border: 4px solid var(--gray);
+    border: 4px solid rgb(85, 85, 85);
 }
 
 .video-title-overlay {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: var(--white);
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    text-shadow: 1px 1px 2px var(--black);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .play-btn-fake {
@@ -574,7 +552,7 @@ aside {
 
 .play-btn-fake::after {
     content: '';
-    border-left: 18px solid var(--white);
+    border-left: 18px solid rgb(255, 255, 255);
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
 }
@@ -589,20 +567,20 @@ aside {
     display: flex;
     align-items: center;
     padding: 0 10px;
-    border-top: 1px solid var(--gray);
+    border-top: 1px solid rgb(85, 85, 85);
 }
 
 .controls-progress {
     flex: 1;
     height: 4px;
-    background: var(--gray);
+    background: rgb(85, 85, 85);
     margin: 0 10px;
 }
 
 .controls-progress-bar {
     width: 20%;
     height: 100%;
-    background: var(--red);
+    background: rgb(204, 0, 0);
 }
 
 .controls-time {
@@ -612,32 +590,32 @@ aside {
 /* --- Sidebar droite : Archives TV --- */
 
 .glam-tv-container {
-    background: var(--hot-pink);
+    background: rgb(255, 20, 147);
     border-radius: 12px 12px 0 0;
     padding: 6px;
 }
 
 .glam-tv-header {
-    background: linear-gradient(var(--header-pink), var(--hot-pink));
+    background: linear-gradient(rgb(255, 153, 204), rgb(255, 20, 147));
     border-radius: 8px;
     padding: 8px 5px;
     text-align: center;
     margin-bottom: 8px;
-    border: 2px solid var(--white);
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .tv-logo {
     font-family: 'Anton', sans-serif;
     font-size: 32px;
-    color: var(--white);
-    text-shadow: 2px 2px 0 var(--accent-pink);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0 rgb(179, 0, 89);
     line-height: 1;
 }
 
 .tv-tabs {
     display: flex;
     justify-content: space-around;
-    color: var(--white);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 11px;
     margin: 8px 0 4px 0;
@@ -646,7 +624,7 @@ aside {
 }
 
 .video-list {
-    background: var(--hot-pink);
+    background: rgb(255, 20, 147);
     padding: 2px;
 }
 
@@ -658,13 +636,13 @@ aside {
 }
 
 .video-item:hover .video-thumb {
-    border-color: var(--yellow);
+    border-color: rgb(255, 240, 0);
 }
 
 .video-thumb {
     height: 130px;
-    background: var(--black);
-    border: 2px solid var(--white);
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
     position: relative;
     margin-bottom: 4px;
 }
@@ -680,14 +658,14 @@ aside {
     position: absolute;
     bottom: 2px;
     right: 2px;
-    background: var(--black);
-    color: var(--white);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 9px;
     padding: 1px;
 }
 
 .video-meta {
-    color: var(--white);
+    color: rgb(255, 255, 255);
     font-size: 11px;
     font-weight: bold;
     line-height: 1.3;
@@ -697,13 +675,13 @@ aside {
 .video-meta .title {
     margin-bottom: 2px;
     display: block;
-    text-shadow: 1px 1px 0 var(--accent-pink);
+    text-shadow: 1px 1px 0 rgb(179, 0, 89);
 }
 
 .video-meta .views {
     font-size: 9px;
     font-weight: normal;
-    color: var(--yellow);
+    color: rgb(255, 240, 0);
 }
 
 /* --- Publicité sidebar --- */
@@ -717,7 +695,7 @@ aside {
 
 .fake-ad-sms h3 {
     margin: 0;
-    color: var(--red);
+    color: rgb(204, 0, 0);
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 900;
@@ -728,13 +706,13 @@ aside {
     margin: 5px 0;
     font-size: 11px;
     font-weight: bold;
-    color: var(--black);
+    color: rgb(0, 0, 0);
     line-height: 1.2;
 }
 
 .sms-code {
-    background: var(--black);
-    color: var(--white);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Courier New', monospace;
     font-size: 16px;
     padding: 3px 8px;
@@ -748,14 +726,14 @@ aside {
 }
 
 /* ============================================================
-   5. PAGE DES THÈSES (theses.html)
+   4. PAGE DES THÈSES (theses.html)
    ============================================================ */
 
 .section-these {
-    background: var(--white);
+    background: rgb(255, 255, 255);
     padding: 15px;
-    border: 3px solid var(--header-pink);
-    box-shadow: 5px 5px 0 var(--header-pink);
+    border: 3px solid rgb(255, 153, 204);
+    box-shadow: 5px 5px 0 rgb(255, 153, 204);
     margin: 15px 0 20px 0;
     grid-column: 1 / -1;
     display: flex;
@@ -772,7 +750,7 @@ aside {
     text-align: center;
     font-size: 44px;
     margin: 10px;
-    color: var(--red);
+    color: rgb(204, 0, 0);
     transform: rotate(1deg);
 }
 
@@ -804,7 +782,7 @@ aside {
 }
 
 /* ============================================================
-   6. PAGE PHOTOS (photos.html)
+   5. PAGE PHOTOS (photos.html)
    ============================================================ */
 
 /* --- Description de la galerie --- */
@@ -830,11 +808,11 @@ aside {
 }
 
 .prof-card { /* ---Gestion des encadrements de la galerie photo j'ai ajouté  --- */
-    border: 3px solid var(--hot-pink); /* --- des bordures roses ici --- */
+    border: 3px solid rgb(255, 20, 147); /* --- des bordures roses ici --- */
     padding: 15px;
     text-align: center;/* --- l'alignement du texte --- */
-    background-color: var(--white);
-    box-shadow: 3px 2px 0px var(--hot-pink);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 2px 0px rgb(255, 20, 147);
 }
 
 .prof-card img {
@@ -849,7 +827,7 @@ aside {
     margin: 10px 0;
     font-family: 'Anton', sans-serif; 
     font-size: 20px;
-    color:var(--hot-pink);
+    color:rgb(255, 20, 147);
 }
 
 .prof-card p {
@@ -859,14 +837,14 @@ aside {
 
 .fun-phrase {
     font-style: italic;
-    color: var(--gray);
+    color: rgb(85, 85, 85);
 }
 
 /* --- Classement --- */
 
 .ranking-subtitle {
     font-size: 14px;
-    color: var(--gray);
+    color: rgb(85, 85, 85);
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
@@ -876,9 +854,9 @@ aside {
 .ranking-item {
     display: flex;
     align-items: center;
-    border: 3px solid var(--hot-pink);
+    border: 3px solid rgb(255, 20, 147);
     padding: 10px;
-    background-color:var(--white);
+    background-color:rgb(255, 255, 255);
 }
 
 .ranking-item img {
@@ -893,12 +871,12 @@ aside {
     margin: 0;
     font-family: 'Permanent Marker', sans-serif;
     font-size: 18px;
-    color: var(--hot-pink);
+    color: rgb(255, 20, 147);
     
 }
 
 .ranking-details p {
     margin: 5px 0;
     font-size: 14px;
-    color: var(--gray);
+    color: rgb(85, 85, 85);
 }
