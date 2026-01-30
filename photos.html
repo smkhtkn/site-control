@@ -9,16 +9,11 @@
 <body><!-- début du contenu visible de la page-->
 
 <div class="page-wrapper shadow"> <!-- Conteneur principal de la page, classe pour style et ombre -->
-    
-    <header>  <!-- En-tête du site contenant le logo et le slogan -->
-        <div class="cartoon-char"></div> <!-- Élément décoratif -->
-        <div class="top-bar"> <!-- pour  insérer la barre supérieure contenant le logo  -->
-            <div class="logo-area"> <!-- Zone du logo et du titre -->
-                <div class="welcome-text">Bienvenue sur</div> <!--POur insérer le texte de bienvenue-->
-                <h1 class="logo">GLAM & GOSSIP<span class="enc">.ENC</span></h1> <!-- Titre principal avec span décoratif -->
-            </div> <!-- Fin logo-area -->
-        </div> <!-- Fin top-bar -->
-        <div class="slogan">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div> <!-- insertion du slognan du site -->
+
+    <header> <!-- En-tête du site contenant le logo et le slogan -->
+        <div class="welcome-text">Bienvenue sur</div> <!--POur insérer le texte de bienvenue-->
+        <h1 class="logo">GLAM & GOSSIP<span class="enc">.ENC</span></h1> <!-- Titre principal avec span décoratif -->
+        <div class="slogan">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
     </header> <!-- fin de l'en-tête -->
 
     <nav class="main-nav">  <!-- Navigation principale -->
@@ -35,8 +30,8 @@
     </nav>   <!--fin nav-->
 
     <div class="buzz-banner"> <!-- pour l'insertion du bandeau d'actualité défilant -->
-        <marquee scrollamount="6" scrolldelay="60"> <!-- pour faire défiler le texte -->
-            🚨 ALERTE ROUGE À LA BNF : UN INCUNABLE DISPARU ?! • PANIQUE AUX ARCHIVES NATIONALES : PLUS DE PLACE DANS LES RAYONNAGES ! • QUI A VOLÉ LE TAMPON ENCREUR DE LA SALLE LABROUSTE ? • FLASH SPÉCIAL : LA MACHINE À CAFÉ DU 65 RUE DE RICHELIEU EST EN PANNE ! 🚨
+        <marquee> <!-- pour faire défiler le texte -->
+            🚨 Alerte rouge à la BnF : un incunable disparu ?! • Panique aux Archives nationales : plus de place dans les rayonnages ! • Qui a volé le tampon encreur de la salle Labrouste ? • Flash spécial : la machine à café du 65 rue de Richelieu est en panne ! 🚨
         </marquee>
     </div>
 
@@ -44,58 +39,58 @@
 <div class="container"> <!-- conteneur principal du contenu de la page photos-->
             <!-- Première rubrique : Galerie des professeurs -->
     <div class="description-galerie"> <!-- section de description de la galerie des professeurs -->
-            <h2>GALERIE DES PROFESSEURS</h2> <!-- titre de la rubrique -->
-            <p class="ranking-subtitle"> Découvrez nos profs: leurs visages,leurs matières et leurs petites phrases qui font sourire !</p> <!-- paragraphe d'introduction de la rubrique -->
+            <h2 class="font-anton text-center">GALERIE DES PROFESSEURS</h2> <!-- titre de la rubrique -->
+            <p class="ranking-subtitle text-gray text-center text-bold text-uppercase"> Découvrez nos profs: leurs visages,leurs matières et leurs petites phrases qui font sourire !</p> <!-- paragraphe d'introduction de la rubrique -->
     </div>
 
     <div class="prof-gallery"> <!--conteneur qui contient toutes les photos des professeurs-->
-        <div class="prof-card"> <!-- photo individuelle du professeur-->
+        <div class="prof-card text-center"> <!-- photo individuelle du professeur-->
             <img src="images/photo_canteaut.jpeg" alt="Olivier Canteaut"> <!-- usage balise img pour insérer la photo avec attribut alt pour l'accessibilité-->
-            <h3>Olivier Canteaut</h3> <!-- titre pour le nom su professeur-->
+            <h3 class="font-anton text-pink">Olivier Canteaut</h3> <!-- titre pour le nom su professeur-->
             <p><strong>Matière :</strong> Paleographie</p><!-- insertion de la matière en gras-->
-            <p class="fun-phrase">"Lis plus vite les manuscrits médiévaux que nos propres notes!!!"</p> <!-- insérer la phrase amusante associée à chaque professeur avec une classe pour le style-->
+            <p class="fun-phrase text-gray">"Lis plus vite les manuscrits médiévaux que nos propres notes!!!"</p> <!-- insérer la phrase amusante associée à chaque professeur avec une classe pour le style-->
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_benevent.jpeg" alt="Christine Benevent">
-            <h3>Christine Benevent</h3>
+            <h3 class="font-anton text-pink">Christine Benevent</h3>
             <p><strong>Matière :</strong> Histoire du livre et de la bibliographie</p>
-            <p class="fun-phrase">"Peut reconnaitre un livre à des centaines de kilomètres)))"</p>
+            <p class="fun-phrase text-gray">"Peut reconnaitre un livre à des centaines de kilomètres)))"</p>
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_gauthier.png" alt="Christophe Gauthier">
-            <h3>Christophe Gauthier</h3>
+            <h3 class="font-anton text-pink">Christophe Gauthier</h3>
             <p><strong>Matière :</strong> Histoire du livre </p>
-            <p class="fun-phrase">"Parle des livres comme des etres vivants"</p>
+            <p class="fun-phrase text-gray">"Parle des livres comme des etres vivants"</p>
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_poncet.jpeg" alt="Olivier Poncet">
-            <h3>Olivier Poncet</h3>
+            <h3 class="font-anton text-pink">Olivier Poncet</h3>
             <p><strong>Matière :</strong> Diplomatique et histoire des institutions à l'époque moderne </p>
-            <p class="fun-phrase">"Repère un acte douteux avant meme la signature"</p>
+            <p class="fun-phrase text-gray">"Repère un acte douteux avant meme la signature"</p>
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_guyotjeannin.jpeg" alt="Olivier Guyotjeannin">
-            <h3>Olivier Guyotjeannin</h3>
+            <h3 class="font-anton text-pink">Olivier Guyotjeannin</h3>
             <p><strong>Matière :</strong> Archeologie</p>
-            <p class="fun-phrase">"Reconnait une époque juste avec un bout de pierre"</p>
+            <p class="fun-phrase text-gray">"Reconnait une époque juste avec un bout de pierre"</p>
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_bermes.jpeg" alt="Emmanuelle Bermes">
-            <h3>Emmanuelle Bermes</h3>
+            <h3 class="font-anton text-pink">Emmanuelle Bermes</h3>
             <p><strong>Matière :</strong> Catalogage des livres anciens </p>
-            <p class="fun-phrase">"Catalogue les livres comme un grand bibliophile"</p>
+            <p class="fun-phrase text-gray">"Catalogue les livres comme un grand bibliophile"</p>
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_vasseur.jpeg" alt="Edouard Vasseur">
-            <h3>Edouard Vasseur</h3>
+            <h3 class="font-anton text-pink">Edouard Vasseur</h3>
             <p><strong>Matière :</strong> Histoire médiévale </p>
-            <p class="fun-phrase">"Lit le moyen age comme nous lisons nos romans"</p>
+            <p class="fun-phrase text-gray">"Lit le moyen age comme nous lisons nos romans"</p>
         </div>
-        <div class="prof-card">
+        <div class="prof-card text-center">
             <img src="images/photo_arabeyre.png" alt="Patrick Arabeyre">
-            <h3>Patrick Arabeyre</h3>
+            <h3 class="font-anton text-pink">Patrick Arabeyre</h3>
             <p><strong>Matière :</strong> Histoire du droit civique et du droit canonique </p>
-            <p class="fun-phrase">"Connait les règles meme celles qu'on n'a jamais lues!!!"</p>
+            <p class="fun-phrase text-gray">"Connait les règles meme celles qu'on n'a jamais lues!!!"</p>
         </div>
             <!-- la présentation de chaque professeur avec sa photo,son nom,sa matière et une phrase amusante associée (pareil que le commentaire concernant le premier professeur) -->
         
@@ -103,44 +98,44 @@
 
     <!-- Deuxième Rubrique : Classement des photos -->
     <div class="description-galerie">
-    <h2>CLASSEMENT DES PHOTOS-EDITION 2005</h2> <!-- Titre de la rubrique classement des photos -->
-    <p class="ranking-subtitle"> Hello!!!! voici le top 5 des clichés  les plus vus et commentés ceux qui font le buzz dans les couloirs !!!!!</p>  <!-- description du clasement -->
+    <h2 class="font-anton text-center">CLASSEMENT DES PHOTOS-EDITION 2005</h2> <!-- Titre de la rubrique classement des photos -->
+    <p class="ranking-subtitle text-gray text-center text-bold text-uppercase"> Hello!!!! voici le top 5 des clichés  les plus vus et commentés ceux qui font le buzz dans les couloirs !!!!!</p>  <!-- description du clasement -->
     </div>
 
     <div class="prof-gallery"> <!-- conteneur qui contient les photos pour le classement -->
         <div class="ranking-item"> <!-- l'élément individuel du classement -->
             <img src="images/photo_canteaut.jpeg" alt="Olivier Canteaut"> <!-- photo du professeur -->
             <div class="ranking-details"> <!-- conteneur pour les détails du classement -->
-                <h4>Olivier Canteaut</h4> <!-- nom du professeur -->
-                <p>Vues : 2500 | Commentaires : 350</p> <!-- statistiques de vues et commentaires -->
+                <h4 class="font-marker text-pink">Olivier Canteaut</h4> <!-- nom du professeur -->
+                <p class="text-gray">Vues : 2500 | Commentaires : 350</p> <!-- statistiques de vues et commentaires -->
             </div>
         </div>
         <div class="ranking-item">
             <img src="images/photo_benevent.jpeg" alt="Christine Benevent">
             <div class="ranking-details">
-                <h4>Christine Benevent</h4>
-                <p>Vues : 2200 | Commentaires : 280</p>
+                <h4 class="font-marker text-pink">Christine Benevent</h4>
+                <p class="text-gray">Vues : 2200 | Commentaires : 280</p>
             </div>
         </div>
         <div class="ranking-item">
             <img src="images/photo_gauthier.png" alt="Christophe Gauthier">
             <div class="ranking-details">
-                <h4>Christophe Gauthier</h4>
-                <p>Vues : 1800 | Commentaires : 220</p>
+                <h4 class="font-marker text-pink">Christophe Gauthier</h4>
+                <p class="text-gray">Vues : 1800 | Commentaires : 220</p>
             </div>
         </div>
         <div class="ranking-item">
             <img src="images/photo_poncet.jpeg" alt="Olivier Poncet">
             <div class="ranking-details">
-                <h4>Olivier Poncet</h4>
-                <p>Vues : 1500 | Commentaires : 180</p>
+                <h4 class="font-marker text-pink">Olivier Poncet</h4>
+                <p class="text-gray">Vues : 1500 | Commentaires : 180</p>
             </div>
         </div>
         <div class="ranking-item">
             <img src="images/photo_guyotjeannin.jpeg" alt="Olivier Guyotjeannin">
             <div class="ranking-details">
-                <h4>Olivier Guyotjeannin</h4>
-                <p>Vues : 1200 | Commentaires : 150</p>
+                <h4 class="font-marker text-pink">Olivier Guyotjeannin</h4>
+                <p class="text-gray">Vues : 1200 | Commentaires : 150</p>
             </div>
 <!-- les autres éléments du classement suivent la même structure que le premier -->
         </div>
@@ -152,8 +147,8 @@
 
 
     <footer> <!-- pied de page de page --> 
-        COPYRIGHT © 2006-2024 GLAM & ARCHIVES INC. <br> 
-        Site parodique réalisé pour l'amour de la Chartes. XOXO.
+        COPYRIGHT © 2004-2026 GLAM & GOSSIP INC. <br> 
+        Site parodique réalisé pour l'amour de l'ENC et du drama XOXO.
     </footer>
 
 </div> 
