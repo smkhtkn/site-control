@@ -83,6 +83,7 @@ a:hover {
 .text-bold { font-weight: bold !important; }
 .text-normal { font-weight: normal !important; }
 .text-uppercase { text-transform: uppercase !important; }
+.text-dec-none { text-decoration: none !important; }
 
 /* Polices */
 .font-anton { font-family: 'Anton', sans-serif !important; }
@@ -109,8 +110,9 @@ a:hover {
 .bg-black { background: rgb(0, 0, 0) !important; }
 .bg-pink { background: rgb(255, 20, 147) !important; }
 
-/* Width */
+/* Width et les grides : notre mise en page de la page d'accueil suppose le grid en trois colonnes; on applique le grid en une colonne pour les autres deux pages */
 .w-100 { width: 100% !important; }
+.grid-column-1 { grid-column: 1 / -1 !important; } /* fait en sorte que l'élément occupe toute la largeur de la grille */
 
 /* Position */
 .pos-rel { position: relative !important; } /* Positionne l'élément par rapport à sa position normale dans le flux du document */
@@ -119,22 +121,22 @@ a:hover {
 /* --- Header (en-tête du site) --- */
 
 header {
-    background: linear-gradient(to bottom, rgb(255, 204, 221), rgb(255, 153, 204));
-    padding: 15px 20px 10px 20px;
-    border-bottom: 4px solid rgb(255, 51, 153);
+    background: linear-gradient(to bottom, rgb(255, 204, 221), rgb(255, 153, 204)); /* dégradé simple rose du clair au foncé */
+    padding: 15px 20px 10px 20px; /* espacement intérieur : haut, droite, bas, gauche */
+    border-bottom: 4px solid rgb(255, 51, 153); /* bordure inférieure rose vif */
 }
 
 .welcome-text {
     margin: 0 0 -6px 5px;
-    transform: rotate(-2deg);
+    transform: rotate(-2deg); /* rotation leger de l'élément, ce qui constitue un effet graphique très populaire au début des années 2000 pour donner un aspect dynamique aux pages. Nous utilisons ce paramètre partout dans notre CSS et ne répétons plus ce commentaire ce qui serait inutilee */
 }
 
 h1.logo {
     font-size: 82px;
     margin: 0;
-    line-height: 0.9;
+    line-height: 0.9; /* hauteur de ligne réduite pour un effet compact */
     color: rgb(255, 51, 153);
-    text-transform: uppercase;
+    text-transform: uppercase; /* texte en majuscules */
     text-shadow: 3px 3px 0px rgb(255, 255, 255), -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255), 2px 2px 0 rgb(255, 255, 255), 5px 5px 0px rgb(0, 0, 0); /* ombre complexe créée avec l'aide du LLM pour imiter un contour blanc autour des lettres du logo */
     letter-spacing: -3px;
 }
@@ -175,8 +177,10 @@ nav {
     color: rgb(255, 240, 0);
 }
 
+/* --- Barre de recherche --- */
+
 .search-box {
-    align-items: center;
+    align-items: center; /* alignement des éléments au centre verticalement */
     gap: 5px;
 }
 
@@ -205,8 +209,8 @@ nav {
 /* --- Conteneur de la grille principale --- */
 
 .container {
-    grid-template-columns: 180px 1fr 250px;
-    gap: 15px;
+    grid-template-columns: 180px 1fr 250px; /* --- trois colonnes en suivant note mise en page de la note de cadrage : sidebar gauche égal à 180px, contenu principal qui est forcément flexible, et en outre sidebar droite égal à 250px --- */
+    gap: 15px; /* --- espacement entre les colonnes --- */
     padding: 15px;
     background: rgb(255, 230, 240);
 }
@@ -220,6 +224,7 @@ footer {
     border-top: 4px solid rgb(255, 255, 255);
 }
 
+/* animation de clignotement : cette règle @keyframes définit une animation qui varie l'opacité de l'élément à 50% à mi-chemin de l'animation, créant un effet de clignotement. nous l'utilisations dans la fausse publicité sms (.fake-ad-sms h3) */
 @keyframes blink {
     50% {
         opacity: 0.5;
@@ -262,8 +267,8 @@ footer {
 }
 
 .celeb-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    grid-template-columns: 1fr 1fr; /* deux colonnes de largeur égale */
+    gap: 5px; /* espacement entre les deux colonnes */
 }
 
 .celeb-item {
@@ -304,7 +309,6 @@ footer {
     font-size: 18px;
     color: rgb(0, 0, 0);
     transform: rotate(-1deg);
-    text-decoration: none !important;
 }
 
 .btn-notes-highlight {
@@ -410,7 +414,7 @@ footer {
     padding: 5px;
 }
 
-/* --- Lecteur vidéo factice --- */
+/* --- Lecteur vidéo fake --- */
 
 .video-player-container {
     height: 300px;
@@ -465,6 +469,11 @@ footer {
     width: 20%;
     height: 100%;
     background: rgb(204, 0, 0);
+}
+
+.cover {
+    filter: sepia(50%) contrast(110%) grayscale(20%);
+    opacity: 0.9;
 }
 
 /* --- Sidebar droite : Archives TV --- */
@@ -569,37 +578,32 @@ footer {
     border: 3px solid rgb(255, 153, 204); /* ---bordure rose --- */
     box-shadow: 5px 5px 0 rgb(255, 153, 204); /* ---ombre rose --- */
     margin: 15px 0 20px 0; /* ---marge extérieure haut et bas --- */
-    grid-column: 1 / -1; /* ---le bloc s'étend sur toutes les colonnes de la grille principale --- */
     align-items: flex-start; /* ---alignement des éléments en haut --- */
     gap: 15px; /* ---espacement entre les éléments --- */
 }
 
 /* ---section publicité thèses --- */
-.pub {
-    grid-column: 1 / -1; /* ---le bloc s'étend sur toutes les colonnes de la grille principale --- */
-}
-
 .pub h2 {
-    font-size: 44px; /* ---taille du texte --- */
-    margin: 10px; /* ---marge autour du titre --- */
-    transform: rotate(1deg); /* --légère rotation du titre --- */
+    font-size: 44px;
+    margin: 10px;
+    transform: rotate(1deg);
 }
 
 /* --- Symbole (petite icône) --- */
 .symbole img {
-    width: 40px; /* ---largeur de l'icône --- */
-    margin-top: 10px; /* --- espacemenent au dessus de l'icône --- */
+    width: 40px; 
+    margin-top: 10px; 
 }
 
 /* --- Informations sur les thèses --- */
 .infos-these h2 {
-    font-size: 40px; /* --- taille du titre --- */
+    font-size: 40px; 
     margin: 0; /* --- pas de marge --- */
 }
 
 .infos-these p {
-    line-height: 1.5; /* --- interligne pour une meilleure lisibilité --- */
-    margin-top: 10px; /* --- espace au-dessus du paragraphe --- */
+    line-height: 1.5; 
+    margin-top: 10px; 
 }
 
 /* ============================================================
@@ -608,12 +612,8 @@ footer {
 
 /* --- Description de la galerie --- */
 
-.description-galerie {
-    grid-column: 1 / -1;
-}
-
-.description-galerie h2 {
-    font-size: 40px; /* ---taille de la police --- */
+.titre-section h2 {
+    font-size: 54px; /* ---taille de la police --- */
 }
 
 /* --- Galerie des professeurs --- */
@@ -622,7 +622,6 @@ footer {
     grid-template-columns: repeat(3, 1fr); /* --- trois colonnes de largeur égale --- */
     gap: 20px; /* --- espacement entre les cadres--- */
     padding: 20px; /* --- espace intérieur du conteneur--- */
-    grid-column: 1 / -1; /* --- la galerie occupe toute la largeur --- */
 }
 
 /* ---Gestion des encadrements de la galerie photo  --- */

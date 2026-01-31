@@ -39,8 +39,10 @@
     </div>
 
 
+    <!-- conteneur principal de la grille (3 colonnes : sidebar gauche, contenu principal, sidebar droite) -->
     <div class="container d-grid">
         
+        <!-- sidebar gauche (texte de bienvenue, widget top profs, boutons) -->
         <aside>
             <div class="sidebar-header font-marker text-red text-center">BIENVENUE</div>
             <div class="intro-text text-center">
@@ -74,7 +76,8 @@
                         <div class="celeb-name fs-9 bg-black text-bold text-uppercase">Bermès</div>
                     </div>
                 </div>
-                <a href="photos.html">
+                
+                <a class="text-dec-none" href="photos.html"> <!-- tous les classes "a" ont la decoration chez nous, c'est pour ça que j'ai créé une classe utilitaire spéciale pour enlever la decoration sur ce lien -->
                 <div class="left-btn bg-white cursor">
                     <div class="btn-notes font-anton text-center">
                         Voir plus de chartistes
@@ -89,8 +92,10 @@
                 </div>
             </div>
         </aside>
+        <!-- fin sidebar gauche -->
 
 
+        <!-- contenu principal (fil d'actualité, navigation, articles) -->
         <main>
             <div class="breadcrump fs-10 text-red text-bold">Accueil >> Scoops >> Administration</div>
             <div class="post-nav fs-10 d-flex text-bold text-uppercase">
@@ -98,6 +103,7 @@
                 <a href="#">Diplomatique : La Cire c'est fini ? »</a>
             </div>
 
+            <!-- article 1 : post d'alerte -->
             <article class="post pos-rel bg-white post-alerte">
                 <h2 class="post-headline font-anton text-red text-uppercase">
                     <a class="text-red" href="#">RUMEUR ROYALE : François Ier furieux ! L'Ordonnance de 1537 bafouée à la BNF ?</a>
@@ -116,6 +122,7 @@
                 </div>
             </article>
 
+            <!-- article 2 : post avec image -->
             <article class="post pos-rel bg-white">
                 <h2 class="post-headline font-anton"><a href="#">BIG BROTHER ou BIG SISTER ? Emmanuelle Bermès & Marina Hervieu traquent vos Skyblogs ! </a></h2>
                 <div class="filed-under fs-10 text-gray">Classé dans: <a href="#">Tech</a> > <a href="#">Projet Webcorpora</a></div>
@@ -132,6 +139,7 @@
                 </div>
             </article>
 
+            <!-- article 3 : post avec citation de livre -->
             <article class="post pos-rel bg-white">
                 <h2 class="post-headline font-anton"><a href="#">CLASH DES ANCIENS : Edouard Vasseur balance TOUT sur l'archivage électronique ! </a></h2>
                 <div class="filed-under fs-10 text-gray">Classé dans: <a href="#">Diplomatique</a> > <a href="#">Best-Seller</a></div>
@@ -145,11 +153,14 @@
                 <div class="tags-footer fs-10 text-red text-bold text-uppercase">Tags: iso 15489, e-administration, vasseur solo, révolution numérique</div>
             </article>
 
+            <!-- article 4 : post avec faux lecteur vidéo -->
             <article class="post pos-rel bg-white">
                 <h2 class="post-headline font-anton"><a href="#">PANIQUE AU CINÉMA ! Christophe Gauthier vs "YouTube" : La fin de l'Histoire ?!</a></h2>
                 <div class="filed-under fs-10 text-gray">Classé dans: <a href="#">Médias</a> > <a href="#">Apocalypse</a></div>
 
+                <!-- faux lecteur vidéo (imite YouTube 2006) -->
                 <div class="video-player-container pos-rel w-100 bg-black">
+                    <img class="w-100 cover" src="images/video3.png" alt="Debat: Le Cinéma est-il mort ?">
                     <div class="video-title-overlay pos-abs fs-16 text-bold text-white">DEBAT: Le Cinéma est-il mort ?</div>
                     <div class="play-btn-fake pos-abs d-flex cursor"></div>
                     <div class="controls-fake pos-abs d-flex">
@@ -160,6 +171,7 @@
                         <span class="fs-10">0:42 / 5:00</span>
                     </div>
                 </div>
+                <!-- fin faux lecteur vidéo -->
 
                 <div class="post-body fs-14">
                     <p>ALERTE ROUGE ! <a href="photos.html" class="keyword text-bold text-pink bg-white">Christophe Gauthier</a> est sorti de ses gonds à la Cinémathèque ce matin.</p>
@@ -169,9 +181,13 @@
             </article>
 
         </main>
+        <!-- fin contenu principal -->
 
 
-        <aside>            
+        <!-- sidebar droite (widget archives tv, fausse pub sms) -->
+        <aside>
+
+            <!-- widget archives tv -->
             <div class="glam-tv-container bg-pink shadow">
                 <div class="glam-tv-header">
                     <div class="widgets-title font-anton text-white">ARCHIVES TV</div>
@@ -180,7 +196,7 @@
                 <div class="video-list bg-pink">
                     <div class="video-item d-flex cursor">
                         <div class="video-thumb pos-rel pos-rel bg-black">
-                            <img class="w-100" src="https://via.placeholder.com/200x120/cc0000/ffffff?text=PSL+LOVES+ENC" alt="Video">
+                            <img class="w-100" src="images/video1.png" alt="Video">
                             <span class="video-duration pos-abs fs-9 text-white bg-black">10:04</span>
                         </div>
                         <div class="video-meta text-bold text-white"><span class="title d-block">RUMEUR : PSL fait les yeux doux à l'ENC... La Sorbonne jalouse ?</span><span class="views fs-9 text-normal">99k vues</span></div>
@@ -188,14 +204,16 @@
                     
                     <div class="video-item d-flex cursor">
                         <div class="video-thumb pos-rel bg-black">
-                            <img class="w-100" src="https://via.placeholder.com/200x120/003366/ffffff?text=CLASH+ENC" alt="Video">
+                            <img class="w-100 cover" src="images/video2.png" alt="Video">
                             <span class="video-duration pos-abs fs-9 bg-black">3:30</span>
                         </div>
                         <div class="video-meta text-white"><span class="title d-block">CLASH : Table ronde ou ring de boxe ? (Images censurées)</span><span class="views fs-9 text-normal">1M vues</span></div>
                     </div>
                 </div>
             </div>
+            <!-- fin widget archives tv -->
 
+            <!-- fausse publicité sms (style années 2000, animation clignotante) -->
             <div class="fake-ad-sms alerte shadow">
                 <h3 class="text-red fs-16">⚠️ INFIDÉLITÉ ? ⚠️</h3>
                 <p class="text-bold">Ton partenaire utilise-t-il<br>OMEKA S<br>dans ton dos ?</p>
@@ -204,10 +222,13 @@
                 <p class="text-bold">au 71515</p>
                 <p class="text-normal">(0,50€ / SMS + coût adhésion ADEMEC)</p>
             </div>
+            <!-- fin fausse publicité sms -->
 
         </aside>
+        <!-- fin sidebar droite -->
 
-    </div> 
+    </div>
+    <!-- fin conteneur principal --> 
 
     <footer class="fs-10 bg-pink text-white">
         COPYRIGHT © 2004-2026 GLAM & GOSSIP INC. <br> 
