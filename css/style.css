@@ -33,7 +33,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(255, 204, 221) url('images/stars-sparkles.gif'); /* --- il s'agit de l'image en fond que nous définissons. Nous avons créé un dossier séparé pour toutes les images --- */
+    background: rgb(255, 204, 221) url('../images/fond.gif'); /* --- il s'agit de l'image en fond que nous définissons. Nous avons créé un dossier séparé pour toutes les images --- */
     background-repeat: repeat; 
     font-family: 'Verdana', 'Arial', sans-serif;
     font-size: 11px;
@@ -64,6 +64,8 @@ a:hover {
 
 /* Nous constatons que certains éléments de CSS se répètent très souvent. Nous avons décidé d'utiliser des classes utilitaires pour réduire la taille du CSS. Ce sont des classes qui peuvent être appliquées dans les pages HTML au besoin. En fait, nous utilisons le principe du Bootstrap que j'aime beaucoup et qui diminue la taille du CSS de manière significative ! Soit dit en passant, ce principe est compatible avec les technologies de l'époque et je le trouve très utile */
 
+/* "!IMPORTANT" QUE NOUS UTILISONS ICI NOUS PERMET DE TOUJOURS SURCHARGER LES CONFLITS POSSIBLES AVEC D'AUTRES CLASSES */
+
 /* Ombres */
 .shadow { box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4) !important; }
 
@@ -87,6 +89,7 @@ a:hover {
 .font-marker { font-family: 'Permanent Marker', cursive !important; }
 
 /* Taille de police */
+.fs-9 { font-size: 9px !important; }
 .fs-10 { font-size: 10px !important; }
 .fs-11 { font-size: 11px !important; }
 .fs-14 { font-size: 14px !important; }
@@ -109,17 +112,19 @@ a:hover {
 /* Width */
 .w-100 { width: 100% !important; }
 
+/* Position */
+.pos-rel { position: relative !important; } /* Positionne l'élément par rapport à sa position normale dans le flux du document */
+.pos-abs { position: absolute !important; } /* Positionne l'élément par rapport à son ancêtre positionné le plus proche */
+
 /* --- Header (en-tête du site) --- */
 
 header {
     background: linear-gradient(to bottom, rgb(255, 204, 221), rgb(255, 153, 204));
     padding: 15px 20px 10px 20px;
-    position: relative;
     border-bottom: 4px solid rgb(255, 51, 153);
 }
 
 .welcome-text {
-    font-size: 14px;
     margin: 0 0 -6px 5px;
     transform: rotate(-2deg);
 }
@@ -130,7 +135,7 @@ h1.logo {
     line-height: 0.9;
     color: rgb(255, 51, 153);
     text-transform: uppercase;
-    text-shadow: 3px 3px 0px rgb(255, 255, 255), -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255), 2px 2px 0 rgb(255, 255, 255), 5px 5px 0px rgb(0, 0, 0);
+    text-shadow: 3px 3px 0px rgb(255, 255, 255), -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255), 2px 2px 0 rgb(255, 255, 255), 5px 5px 0px rgb(0, 0, 0); /* ombre complexe créée avec l'aide du LLM pour imiter un contour blanc autour des lettres du logo */
     letter-spacing: -3px;
 }
 
@@ -139,12 +144,10 @@ h1.logo span {
     text-shadow: 2px 2px 0 rgb(255, 20, 147);
     vertical-align: top;
     margin-top: 15px;
-    display: inline-block;
     transform: rotate(5deg);
 }
 
 .slogan {
-    font-size: 16px;
     margin: 5px 0;
     text-shadow: 1px 1px 0 rgb(255, 255, 255);
 }
@@ -155,7 +158,6 @@ nav {
     padding: 6px 15px;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
     border-top: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(179, 0, 89);
 }
@@ -165,7 +167,6 @@ nav {
     margin-right: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 14px;
 }
 
 .nav-links a:hover {
@@ -198,14 +199,12 @@ nav {
     border-bottom: 2px solid rgb(255, 51, 153);
     padding: 8px 0;
     color: rgb(179, 0, 89);
-    font-size: 12px;
     text-transform: uppercase;
 }
 
 /* --- Conteneur de la grille principale --- */
 
 .container {
-    display: grid;
     grid-template-columns: 180px 1fr 250px;
     gap: 15px;
     padding: 15px;
@@ -263,7 +262,6 @@ footer {
 }
 
 .celeb-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
@@ -284,7 +282,6 @@ footer {
 
 .celeb-name {
     color: rgb(255, 240, 0);
-    font-size: 9px;
     padding: 3px 0;
 }
 
@@ -335,7 +332,6 @@ footer {
     padding: 15px;
     border: 1px solid rgb(255, 204, 221);
     box-shadow: 3px 3px 0 rgb(255, 153, 204);
-    position: relative;
 }
 
 .post-headline {
@@ -362,7 +358,6 @@ footer {
 }
 
 .post-body {
-    font-size: 13px;
     line-height: 1.5;
     color: rgb(51, 51, 51);
 }
@@ -409,10 +404,6 @@ footer {
     font-style: italic;
 }
 
-.post-cta {
-    font-size: 16px;
-}
-
 .book-title {
     font-size: 18px;
     border: 1px dotted rgb(204, 0, 0);
@@ -423,23 +414,19 @@ footer {
 
 .video-player-container {
     height: 300px;
-    position: relative;
     margin-bottom: 15px;
     border: 4px solid rgb(85, 85, 85);
 }
 
 .video-title-overlay {
-    position: absolute;
-    top: 10px;
+    top: 10px; /* les attributs pour le positionnement absolu de l'élément où "top" définit la distance depuis le bord supérieur du conteneur parent et "left" définit la distance depuis le bord gauche du conteneur parent */
     left: 10px;
-    font-size: 16px;
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .play-btn-fake {
-    position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; /* les attributs pour le positionnement absolu de l'élément où "top" définit la distance depuis le bord supérieur du conteneur parent et "left" définit la distance depuis le bord gauche du conteneur parent */
     transform: translate(-50%, -50%);
     width: 70px;
     height: 50px;
@@ -457,7 +444,6 @@ footer {
 }
 
 .controls-fake {
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -519,7 +505,6 @@ footer {
 .video-thumb {
     height: 130px;
     border: 2px solid rgb(255, 255, 255);
-    position: relative;
     margin-bottom: 4px;
 }
 
@@ -530,10 +515,8 @@ footer {
 }
 
 .video-duration {
-    position: absolute;
     bottom: 2px;
     right: 2px;
-    font-size: 9px;
     padding: 1px;
 }
 
@@ -548,7 +531,6 @@ footer {
 }
 
 .video-meta .views {
-    font-size: 9px;
     color: rgb(255, 240, 0);
 }
 
@@ -563,7 +545,6 @@ footer {
 .fake-ad-sms h3 {
     margin: 0;
     text-transform: uppercase;
-    font-size: 16px;
     font-weight: 900;
     animation: blink 1s infinite;
 }
@@ -574,9 +555,7 @@ footer {
 
 .sms-code {
     font-family: 'Courier New', monospace;
-    font-size: 16px;
     padding: 3px 8px;
-    display: inline-block;
     transform: rotate(-2deg);
 }
 
@@ -584,40 +563,43 @@ footer {
    4. PAGE DES THÈSES (theses.html)
    ============================================================ */
 
+/* ---définition du style du container des thèses --- */
 .section-these {
-    padding: 15px;
-    border: 3px solid rgb(255, 153, 204);
-    box-shadow: 5px 5px 0 rgb(255, 153, 204);
-    margin: 15px 0 20px 0;
-    grid-column: 1 / -1;
-    align-items: flex-start;
-    gap: 15px;
+    padding: 15px; /* ---espace intérieur --- */
+    border: 3px solid rgb(255, 153, 204); /* ---bordure rose --- */
+    box-shadow: 5px 5px 0 rgb(255, 153, 204); /* ---ombre rose --- */
+    margin: 15px 0 20px 0; /* ---marge extérieure haut et bas --- */
+    grid-column: 1 / -1; /* ---le bloc s'étend sur toutes les colonnes de la grille principale --- */
+    align-items: flex-start; /* ---alignement des éléments en haut --- */
+    gap: 15px; /* ---espacement entre les éléments --- */
 }
 
+/* ---section publicité thèses --- */
 .pub {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* ---le bloc s'étend sur toutes les colonnes de la grille principale --- */
 }
 
 .pub h2 {
-    font-size: 44px;
-    margin: 10px;
-    transform: rotate(1deg);
+    font-size: 44px; /* ---taille du texte --- */
+    margin: 10px; /* ---marge autour du titre --- */
+    transform: rotate(1deg); /* --légère rotation du titre --- */
 }
 
+/* --- Symbole (petite icône) --- */
 .symbole img {
-    width: 40px;
-    margin-top: 10px;
+    width: 40px; /* ---largeur de l'icône --- */
+    margin-top: 10px; /* --- espacemenent au dessus de l'icône --- */
 }
 
+/* --- Informations sur les thèses --- */
 .infos-these h2 {
-    font-size: 40px;
-    margin: 0;
+    font-size: 40px; /* --- taille du titre --- */
+    margin: 0; /* --- pas de marge --- */
 }
 
 .infos-these p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: 10px;
+    line-height: 1.5; /* --- interligne pour une meilleure lisibilité --- */
+    margin-top: 10px; /* --- espace au-dessus du paragraphe --- */
 }
 
 /* ============================================================
@@ -631,75 +613,71 @@ footer {
 }
 
 .description-galerie h2 {
-    font-size: 40px;
+    font-size: 40px; /* ---taille de la police --- */
 }
 
 /* --- Galerie des professeurs --- */
 
 .prof-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr); /* --- trois colonnes de largeur égale --- */
+    gap: 20px; /* --- espacement entre les cadres--- */
+    padding: 20px; /* --- espace intérieur du conteneur--- */
+    grid-column: 1 / -1; /* --- la galerie occupe toute la largeur --- */
 }
 
-.prof-card { /* ---Gestion des encadrements de la galerie photo j'ai ajouté  --- */
-    border: 3px solid rgb(255, 20, 147); /* --- des bordures roses ici --- */
-    padding: 15px;
-    background: rgb(255, 255, 255);
-    box-shadow: 3px 2px 0px rgb(255, 20, 147);
+/* ---Gestion des encadrements de la galerie photo  --- */
+.prof-card {
+    border: 3px solid rgb(255, 20, 147); /* --- des bordures roses --- */
+    padding: 15px; /* --- espacement interieur --- */
+    background: rgb(255, 255, 255); /* ---fond blanc --- */
+    box-shadow: 3px 2px 0px rgb(255, 20, 147); /* --- ombre décorative rose --- */
 }
 
 .prof-card img {
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    height: 250px; /* --- hauteur fixe pour uniformité --- */
+    object-fit: cover; /* --- recadrage sans déformation --- */
+    border-radius: 5px; /* ---arrondissement des coins --- */
+    margin-bottom: 10px; /* --- espace sous l'image --- */
 }
 
 .prof-card h3 {
-    margin: 10px 0;
-    font-size: 20px;
+    margin: 10px 0; /* --- marge verticale --- */
+    font-size: 20px; /* --- taille de la police --- */
 }
 
 .prof-card p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 5px 0; /* --- espacement entre les paragraphes --- */
 }
 
-.fun-phrase {
-    font-style: italic;
-}
+/* --- Classement (section du top 5) --- */
 
-/* --- Classement --- */
-
+/* --- Sous-titre du classement --- */
 .ranking-subtitle {
-    font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* --- espacement sous le texte --- */
 }
 
+/* --- Élément individuel du classement --- */
 .ranking-item {
-    align-items: center;
-    border: 3px solid rgb(255, 20, 147);
-    padding: 10px;
-    background-color:rgb(255, 255, 255);
+    align-items: center; /* --- alignement vertical centré --- */
+    border: 3px solid rgb(255, 20, 147); /* --- bordure rose --- */
+    padding: 10px; /* --- espace intérieur --- */
+    background-color:rgb(255, 255, 255); /* --- fond blanc --- */
 }
 
 .ranking-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 15px;
+    width: 80px; /* --- largeur des images--- */
+    height: 80px; /* --- hauteur des images --- */
+    object-fit: cover; /* --- recadrage sans déformation --- */
+    border-radius: 5px; /* --- coins arrondis --- */
+    margin-right: 15px; /* ---espacement avant le texte --- */
 }
 
+/* --- Détails du classement --- */
 .ranking-details h4 {
-    margin: 0;
-    font-size: 18px;
+    margin: 0; /* --- pas de marge --- */
+    font-size: 18px; /* --- taille de la police --- */
 }
 
 .ranking-details p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 5px 0; /* --- espacement vertical --- */
 }

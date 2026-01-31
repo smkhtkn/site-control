@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+<!DOCTYPE html>     <!-- indique au navigateur le format du fichier html5-->
+<html lang="fr">    <!-- la balise racine qui présente avec l'attribut langue que la langue du contenu est en français-->
+<head>  <!-- contient des informations sur la page qui ne sont pas visibles par l'utilisateur-->
+    <meta charset="UTF-8">  <!--Pour l'encodages des caractères pour éviter les problèmes d'affichage des caractères spéciaux-->
+    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title> <!-- Titre de la page  -->
+    <link rel="stylesheet" href="./css/style.css"> <!--lien vers la feuille de style externe css-->
+</head><!-- fermeture de la balise head-->
 
-<div class="page-wrapper bg-white shadow">
-    <header>
-        <div class="top-bar">
-            <div class="logo-area">
-                <div class="welcome-text font-marker text-gray text-bold">Bienvenue sur</div>
-                <h1 class="logo font-anton">GLAM & GOSSIP<span class="text-white">.ENC</span></h1>
-            </div>
-        </div>
-        <div class="slogan font-marker text-gray text-center">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
-    </header>
+<body><!-- début du contenu visible de la page-->
 
-    <nav class="d-flex text-bold bg-pink">
-        <div class="nav-links font-anton">
-            <a class="text-white" href="index.html">Accueil</a>
-            <a class="text-white" href="photos.html">Photos</a>
-            <a class="text-white" href="theses.html">Thèses Scandales</a>
-        </div>
+<div class="page-wrapper bg-white shadow"> <!-- Conteneur principal de la page, classe pour style et ombre -->
+
+    <header class="pos-rel"> <!-- En-tête du site contenant le logo et le slogan -->
+        <div class="welcome-text fs-14 font-marker text-gray text-bold">Bienvenue sur</div> <!--POur insérer le texte de bienvenue-->
+        <h1 class="logo font-anton">GLAM & GOSSIP<span class="text-white d-inline-block">.ENC</span></h1> <!-- Titre principal avec span décoratif -->
+        <div class="slogan font-marker fs-16 text-gray text-center">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
+    </header> <!-- fin de l'en-tête -->
+
+    <nav class="d-flex text-bold bg-pink">  <!-- Navigation principale -->
+        <div class="nav-links font-anton"> <!-- conteneur des liens de navigation -->
+            <a class="text-white fs-14" href="index.html">Accueil</a>
+            <a class="text-white fs-14" href="photos.html">Photos</a>
+            <a class="text-white fs-14" href="theses.html">Thèses Scandales</a>
+            <!-- les lien vers les différentes pages du site:accueil,photos,thèses-->
+        </div> <!-- fin nav-links text-white -->
         <div class="search-box d-flex">
             <form action="https://www.google.com/search" method="get">
                 <input type="hidden" name="tbs" value="cdr:1,cd_min:1/1/2006,cd_max:12/31/2006">
@@ -31,16 +30,16 @@
                 <button class="text-bold cursor fs-11" type="submit">SEARCH!</button>
             </form>
         </div>
-    </nav>
+    </nav>   <!--fin nav-->
 
-    <div class="buzz-banner text-bold">
-        <marquee>
+    <div class="buzz-banner fs-14 text-bold"> <!-- pour l'insertion du bandeau d'actualité défilant -->
+        <marquee> <!-- pour faire défiler le texte -->
             🚨 Alerte rouge à la BnF : un incunable disparu ?! • Panique aux Archives nationales : plus de place dans les rayonnages ! • Qui a volé le tampon encreur de la salle Labrouste ? • Flash spécial : la machine à café du 65 rue de Richelieu est en panne ! 🚨
         </marquee>
     </div>
 
 
-<div class="container">
+<div class="container d-grid">
 
     <div class="section-these bg-white d-flex">
 
@@ -50,7 +49,7 @@
 
         <div class="infos-these">
             <h2 class="font-anton">EXPLOSIF : cette chartiste dévoile les DESSOUS des beffrois flamands ! (^_^)</h2>
-            <p>
+            <p class="fs-14">
                 HALLUCINANT ! Laure Delrue fait l'effet d'une BOMBE à l'École des chartes en révélant les dessous incroyables de la construction des beffrois et hôtels de ville du Nord ! O_O Vous pensiez que ces tours n'étaient que de vieilles pierres ? ERREUR FATALE ! Derrière chaque beffroi se cache une guerre d'ego MONUMENTALE entre échevins, princes et bourgeois en quête de pouvoir ! De Douai à Arras, de Bruges à Sienne, notre chartiste a mené l'enquête comme une vraie Lara Croft de l'archive ! *HOT* On y découvre des chantiers pharaoniques, des rivalités de clochers (au sens propre !), des horloges qui sonnent l'heure du POUVOIR et des sculptures de lions et dragons plus bling-bling que les clips de MTV ! Le beffroi, c'était le skyline perso des bourgeois médiévaux, leur manière de dire « check mon power » au seigneur du coin ! Cette thèse, c'est plus chaud que la finale de Loft Story !
                 <br><br>
                 Vous voulez connaître les potins des échevins médiévaux ? <a href="https://bibnum.chartes.psl.eu/s/thenca/item/57682">Foncez lire ce travail explosif ici !</a>
@@ -67,7 +66,7 @@
 
         <div class="infos-these">
             <h2 class="font-anton">SCANDALE AU QUARTIER LATIN : Elle a TOUT révélé sur les secrets des Mathurins ! ♥</h2>
-            <p>
+            <p class="fs-14">
                 OMG vous n'allez PAS y croire ! La très glamour Emmanuelle Bermès fait trembler les murs de l'École des chartes en dévoilant les DESSOUS du couvent des Mathurins ! XDD Entre gravures sulfureuses, moines influenceurs du XVIIe siècle et guerre d'ego avec les Espagnols, cette thèse a TOUT d'un blockbuster historique ! On y découvre comment le père Louis Petit — le vrai boss du game pendant 40 ans — a transformé son couvent en véritable agence de com' avant l'heure, inondant Paris d'estampes virales ! Des artistes flamands aux confréries de libraires, des captifs rachetés en Barbarie aux miracles d'accouchement (oui oui, on appliquait les images sur le ventre des futures mamans O_o), RIEN n'échappe à cette enquête digne des plus grands scandales ! La rue Saint-Jacques n'a qu'à bien se tenir — ses secrets sont désormais exposés au grand jour ! XOXO (>^_^)>♥
                 <br><br>
                 Envie de connaître TOUS les détails croustillants ? <a href="https://bibnum.chartes.psl.eu/s/thenca/item/58970">Lisez l'intégralité de cette thèse sensationnelle sur le site de l'École des chartes !</a>
@@ -84,13 +83,13 @@
 
         <div class="infos-these">
             <h2 class="font-anton">Paul-Émile Victor : l'aventurier qui a fait FONDRE LA BANQUISE (et les coeurs)</h2>
-            <p>C'est la nouvelle thèse événement qui fait frissonner le monde intellectuel : Thierry Fournier signe un portrait XXL de Paul-Émile Victor, explorateur superstar, maître de la banquise et icône avant l'heure. À travers cette recherche flambant neuve, Victor apparaît tour à tour ethnographe génial, stratège du froid, communicant hors pair et pionnier de l'écologie — un homme qui a su transformer la science en épopée et sa vie en véritable légende. Du Groenland aux projecteurs médiatiques, des choix audacieux aux zones d'ombre soigneusement disséquées, cette thèse dévoile l'envers du mythe avec panache et précision. Curieuse de découvrir le héros sans filtre et le chercheur derrière l'exploit ? <a href="https://bibnum.chartes.psl.eu/s/thenca/item/58976">Le récit complet vous attend</a> — accrochez-vous, ça décoiffe comme une tempête polaire !
+            <p class="fs-14">C'est la nouvelle thèse événement qui fait frissonner le monde intellectuel : Thierry Fournier signe un portrait XXL de Paul-Émile Victor, explorateur superstar, maître de la banquise et icône avant l'heure. À travers cette recherche flambant neuve, Victor apparaît tour à tour ethnographe génial, stratège du froid, communicant hors pair et pionnier de l'écologie — un homme qui a su transformer la science en épopée et sa vie en véritable légende. Du Groenland aux projecteurs médiatiques, des choix audacieux aux zones d'ombre soigneusement disséquées, cette thèse dévoile l'envers du mythe avec panache et précision. Curieuse de découvrir le héros sans filtre et le chercheur derrière l'exploit ? <a href="https://bibnum.chartes.psl.eu/s/thenca/item/58976">Le récit complet vous attend</a> — accrochez-vous, ça décoiffe comme une tempête polaire !
             </p>
         </div>
 
     </div>
 
-    <div class="post bg-white post-alerte pub">
+    <div class="post pos-rel bg-white post-alerte pub">
         <h2 class="font-marker text-red text-center">Autres actualités !</h2>
             <a class="d-block w-100" href="photos.html"><img class="d-block w-100" src="./images/pub.jpg" alt="Publicité"></a>
     </div>
@@ -103,7 +102,7 @@
 
         <div class="infos-these">
             <h2 class="font-anton">Hawaii, amour, canonnières et vin rouge : quand les Français se mêlaient de l'histoire du paradis &lt;3</h2>
-            <p>
+            <p class="fs-14">
                 C'est la nouvelle thèse qui fait danser les archives sous les palmiers : Paul Huetz de Lemps revisite un siècle d'histoire hawaïenne vu à la française, entre ambitions diplomatiques, missionnaires en soutane, baleiniers en goguette et consuls jouant les figurants d'un grand théâtre impérial. De 1837 à 1898, la France observe, intervient, menace parfois… puis se retire en douceur, laissant Hawaii glisser dans l'orbite américaine. Intrigues internationales, chocs culturels, fantasmes exotiques et désillusions coloniales : cette thèse raconte comment les Français ont été tour à tour acteurs, spectateurs — et parfois simples touristes un peu déçus — d'un paradis en pleine métamorphose. Hâte de découvrir ce feuilleton historique où se croisent canons, missions catholiques et rêves tropicaux ? <a href="https://bibnum.chartes.psl.eu/s/thenca/item/58979">Le texte intégral vous attend</a>, bien plus piquant qu'une carte postale.
             </p>
         </div>
@@ -118,7 +117,7 @@
 
         <div class="infos-these">
             <h2 class="font-anton">SCOOP MÉDIÉVAL : Elle a découvert la bibliothèque secrète des Cholets ! OMG !</h2>
-            <p>
+            <p class="fs-14">
                 BREAKING NEWS qui va faire trembler le Quartier Latin ! La divine Karine Rebmeister vient de sortir UNE THÈSE DE FEU sur la bibliothèque médiévale du collège des Cholets — et croyez-nous, c'est plus croustillant qu'un épisode des Frères Scott ! XDD
                 <br><br>
                 Imaginez : 1295, Paris. Le cardinal Jean Cholet meurt et laisse un GROS chèque pour créer un collège pour les étudiants de Beauvais et d'Amiens. Mais plot twist : pas de bibliothèque à l'origine ! 📚 C'est grâce aux « librarii » — les BFF bibliothécaires de l'époque — que tout commence ! Ces étudiants en théologie devaient présenter chaque année, première semaine du Carême (timing is everything !), un inventaire à jour. Genre, l'ancêtre du récolement, mais en plus glamour !

@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+<!DOCTYPE html>     <!-- indique au navigateur le format du fichier html5-->
+<html lang="fr">    <!-- la balise racine qui présente avec l'attribut langue que la langue du contenu est en français-->
+<head>  <!-- contient des informations sur la page qui ne sont pas visibles par l'utilisateur-->
+    <meta charset="UTF-8">  <!--Pour l'encodages des caractères pour éviter les problèmes d'affichage des caractères spéciaux-->
+    <title>Glam & Gossip — Le site le plus Chartiste du Web !</title> <!-- Titre de la page  -->
+    <link rel="stylesheet" href="./css/style.css"> <!--lien vers la feuille de style externe css-->
+</head><!-- fermeture de la balise head-->
 
-<div class="page-wrapper bg-white shadow">
-    <header>
-        <div class="welcome-text font-marker text-gray text-bold">Bienvenue sur</div>
-        <h1 class="logo font-anton">GLAM & GOSSIP<span class="text-white">.ENC</span></h1>
-        <div class="slogan font-marker text-gray text-center">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
-    </header>
+<body><!-- début du contenu visible de la page-->
 
-    <nav class="d-flex text-bold bg-pink">
-        <div class="nav-links font-anton">
-            <a class="text-white" href="index.html">Accueil</a>
-            <a class="text-white" href="photos.html">Photos</a>
-            <a class="text-white" href="theses.html">Thèses Scandales</a>
-        </div>
+<div class="page-wrapper bg-white shadow"> <!-- Conteneur principal de la page, classe pour style et ombre -->
+
+    <header class="pos-rel"> <!-- En-tête du site contenant le logo et le slogan -->
+        <div class="welcome-text fs-14 font-marker text-gray text-bold">Bienvenue sur</div> <!--POur insérer le texte de bienvenue-->
+        <h1 class="logo font-anton">GLAM & GOSSIP<span class="text-white d-inline-block">.ENC</span></h1> <!-- Titre principal avec span décoratif -->
+        <div class="slogan font-marker fs-16 text-gray text-center">Galleries, Libraries, Archives & Museums — Digitally Divine, Paleographically Petty</div>
+    </header> <!-- fin de l'en-tête -->
+
+    <nav class="d-flex text-bold bg-pink">  <!-- Navigation principale -->
+        <div class="nav-links font-anton"> <!-- conteneur des liens de navigation -->
+            <a class="text-white fs-14" href="index.html">Accueil</a>
+            <a class="text-white fs-14" href="photos.html">Photos</a>
+            <a class="text-white fs-14" href="theses.html">Thèses Scandales</a>
+            <!-- les lien vers les différentes pages du site:accueil,photos,thèses-->
+        </div> <!-- fin nav-links text-white -->
         <div class="search-box d-flex">
             <form action="https://www.google.com/search" method="get">
                 <input type="hidden" name="tbs" value="cdr:1,cd_min:1/1/2006,cd_max:12/31/2006">
@@ -27,16 +30,16 @@
                 <button class="text-bold cursor fs-11" type="submit">SEARCH!</button>
             </form>
         </div>
-    </nav>
+    </nav>   <!--fin nav-->
 
-    <div class="buzz-banner text-bold">
-        <marquee>
+    <div class="buzz-banner fs-14 text-bold"> <!-- pour l'insertion du bandeau d'actualité défilant -->
+        <marquee> <!-- pour faire défiler le texte -->
             🚨 Alerte rouge à la BnF : un incunable disparu ?! • Panique aux Archives nationales : plus de place dans les rayonnages ! • Qui a volé le tampon encreur de la salle Labrouste ? • Flash spécial : la machine à café du 65 rue de Richelieu est en panne ! 🚨
         </marquee>
     </div>
 
 
-    <div class="container">
+    <div class="container d-grid">
         
         <aside>
             <div class="sidebar-header font-marker text-red text-center">BIENVENUE</div>
@@ -53,22 +56,22 @@
 
             <div class="top-celebs-widget bg-pink shadow">
                 <div class="widgets-title font-anton text-white text-uppercase">Top profs</div>
-                <div class="celeb-grid">
+                <div class="celeb-grid d-grid">
                     <div class="celeb-item bg-black d-block">
                         <img class="w-100" src="images/photo_vasseur.jpeg" alt="Vasseur">
-                        <div class="celeb-name bg-black text-bold text-uppercase">Vasseur</div>
+                        <div class="celeb-name fs-9 bg-black text-bold text-uppercase">Vasseur</div>
                     </div>
                     <div class="celeb-item bg-black d-block">
                         <img class="w-100" src="images/photo_poncet.jpeg" alt="Poncet">
-                        <div class="celeb-name bg-black text-bold text-uppercase">Poncet</div>
+                        <div class="celeb-name fs-9 bg-black text-bold text-uppercase">Poncet</div>
                     </div>
                     <div class="celeb-item bg-black d-block">
                         <img class="w-100" src="images/photo_gauthier.png" alt="Gauthier">
-                        <div class="celeb-name bg-black text-bold text-uppercase">Gauthier</div>
+                        <div class="celeb-name fs-9 bg-black text-bold text-uppercase">Gauthier</div>
                     </div>
                     <div class="celeb-item bg-black d-block">
                         <img class="w-100" src="images/photo_bermes.jpeg" alt="Bermes">
-                        <div class="celeb-name bg-black text-bold text-uppercase">Bermès</div>
+                        <div class="celeb-name fs-9 bg-black text-bold text-uppercase">Bermès</div>
                     </div>
                 </div>
                 <a href="photos.html">
@@ -95,7 +98,7 @@
                 <a href="#">Diplomatique : La Cire c'est fini ? »</a>
             </div>
 
-            <article class="post bg-white post-alerte">
+            <article class="post pos-rel bg-white post-alerte">
                 <h2 class="post-headline font-anton text-red text-uppercase">
                     <a class="text-red" href="#">RUMEUR ROYALE : François Ier furieux ! L'Ordonnance de 1537 bafouée à la BNF ?</a>
                 </h2>
@@ -103,53 +106,53 @@
 
                 <img src="images/françois.png" class="post-image w-100 d-block post-image-vintage">
 
-                <div class="post-body">
+                <div class="post-body fs-14">
                     <p>Scène surnaturelle dans la réserve des livres rares ! Le spectre de <strong>François Ier</strong> a été aperçu, brandissant l'Ordonnance de Montpellier de 1537.</p>
                     <p class="post-quote">
                         <strong>SPOTTED :</strong> Le Roy hurlait sur un pauvre étudiant qui tentait de déposer sa thèse sur un CD-ROM. <em>"Tout livre imprimé doit être mis en ma librairie ! Je veux du vélin, du papier chiffon ! Que nenni ce format numérique du diable !"</em>
                     </p>
                     <p>On rappelle à tous que le Dépôt Légal, c'est sacré. Si vous ne voulez pas finir au cachot de la Bastille (ou pire, privés de carte de lecteur), apportez votre exemplaire papier !</p>
-                    <p class="post-cta text-red text-bold text-center">TELL US : Avez-vous peur du fantôme du Roy ? BOOOO </p>
+                    <p class="fs-16 text-red text-bold text-center">TELL US : Avez-vous peur du fantôme du Roy ? BOOOO </p>
                 </div>
             </article>
 
-            <article class="post bg-white">
+            <article class="post pos-rel bg-white">
                 <h2 class="post-headline font-anton"><a href="#">BIG BROTHER ou BIG SISTER ? Emmanuelle Bermès & Marina Hervieu traquent vos Skyblogs ! </a></h2>
                 <div class="filed-under fs-10 text-gray">Classé dans: <a href="#">Tech</a> > <a href="#">Projet Webcorpora</a></div>
 
                 <img src="images/skyblog.jpeg" class="post-image w-100">
                 <div class="image-caption">Emmanuelle Bermès, Photographie d'une session de consultation d'un skyblog à la BnF, 2023</div>
 
-                <div class="post-body">
+                <div class="post-body fs-14">
                     <p>Vous pensiez pouvoir supprimer discrètement vos poèmes d'amour de 4ème B ? <strong>IMPOSSIBLE !</strong></p>
-                    <p>Le duo de choc <a href="#" class="keyword text-bold text-pink bg-white">Emmanuelle Bermès</a> et <a href="#" class="keyword text-bold text-pink bg-white">Marina Hervieu</a> a lancé le projet <strong>"Webcorpora"</strong>. Elles parcourent le web avec leurs robots moissonneurs !</p>
+                    <p>Le duo de choc <a href="photos.html" class="keyword text-bold text-pink bg-white">Emmanuelle Bermès</a> et <a href="photos.html" class="keyword text-bold text-pink bg-white">Marina Hervieu</a> a lancé le projet <strong>"Webcorpora"</strong>. Elles parcourent le web avec leurs robots moissonneurs !</p>
                     <p>Leur message est clair pour tous les chartistes qui ont un blog sur Tokio Hotel : <em>"Souriez, vous êtes filmés, enfin... archivés !"</em></p>
                     <p>Tout est gardé pour l'éternité (et pour la science, paraît-il). C'est la fin de l'oubli numérique ! On adore ou on déteste ?</p>
                     <p class="post-cta-pink text-pink text-bold text-center">LAISSEZ VOS COMS ! (Ils seront archivés aussi lol)</p>
                 </div>
             </article>
 
-            <article class="post bg-white">
+            <article class="post pos-rel bg-white">
                 <h2 class="post-headline font-anton"><a href="#">CLASH DES ANCIENS : Edouard Vasseur balance TOUT sur l'archivage électronique ! </a></h2>
                 <div class="filed-under fs-10 text-gray">Classé dans: <a href="#">Diplomatique</a> > <a href="#">Best-Seller</a></div>
 
-                <div class="post-body">
+                <div class="post-body fs-14">
                     <p>Le livre que tout le monde s'arrache sous le manteau s'intitule :</p>
                     <p class="book-title font-anton text-red text-bold">"L'archivage électronique dans l'administration publique : expériences croisées de trois services d'archives ministériels"</p>
-                    <p>Derrière ce titre à rallonge se cache le manifeste explosif d'<a href="#" class="keyword text-bold text-pink bg-white">Edouard Vasseur</a>. Il ose dire tout haut ce que tout le monde pense tout bas : <strong>Le papier, c'est fini !</strong> 😲</p>
+                    <p>Derrière ce titre à rallonge se cache le manifeste explosif d'<a href="photos.html" class="keyword text-bold text-pink bg-white">Edouard Vasseur</a>. Il ose dire tout haut ce que tout le monde pense tout bas : <strong>Le papier, c'est fini !</strong> 😲</p>
                     <p>Dans cet ouvrage, il défie les lois de la diplomatique classique. Pour lui, un fichier `.doc` a une âme. Les puristes du parchemin crient au scandale, mais Vasseur regarde vers le futur. C'est le Harry Potter des Archives Nationales !</p>
                 </div>
                 <div class="tags-footer fs-10 text-red text-bold text-uppercase">Tags: iso 15489, e-administration, vasseur solo, révolution numérique</div>
             </article>
 
-            <article class="post bg-white">
+            <article class="post pos-rel bg-white">
                 <h2 class="post-headline font-anton"><a href="#">PANIQUE AU CINÉMA ! Christophe Gauthier vs "YouTube" : La fin de l'Histoire ?!</a></h2>
                 <div class="filed-under fs-10 text-gray">Classé dans: <a href="#">Médias</a> > <a href="#">Apocalypse</a></div>
 
-                <div class="video-player-container w-100 bg-black">
-                    <div class="video-title-overlay text-bold text-white">DEBAT: Le Cinéma est-il mort ?</div>
-                    <div class="play-btn-fake d-flex cursor"></div>
-                    <div class="controls-fake d-flex">
+                <div class="video-player-container pos-rel w-100 bg-black">
+                    <div class="video-title-overlay pos-abs fs-16 text-bold text-white">DEBAT: Le Cinéma est-il mort ?</div>
+                    <div class="play-btn-fake pos-abs d-flex cursor"></div>
+                    <div class="controls-fake pos-abs d-flex">
                         <span class="controls-play">▶</span>
                         <div class="controls-progress">
                             <div class="controls-progress-bar"></div>
@@ -158,8 +161,8 @@
                     </div>
                 </div>
 
-                <div class="post-body">
-                    <p>ALERTE ROUGE ! <a href="#" class="keyword text-bold text-pink bg-white">Christophe Gauthier</a> est sorti de ses gonds à la Cinémathèque ce matin.</p>
+                <div class="post-body fs-14">
+                    <p>ALERTE ROUGE ! <a href="photos.html" class="keyword text-bold text-pink bg-white">Christophe Gauthier</a> est sorti de ses gonds à la Cinémathèque ce matin.</p>
                     <p>La raison ? Un site bizarre racheté par Google qui s'appelle <strong>"You Tube"</strong>. Des millions de vidéos floues !</p>
                     <p><em>"Comment faire l'histoire des médias avec ce chaos ?!"</em> s'inquiète notre spécialiste. Il prédit que si on ne fait rien, le patrimoine audiovisuel va disparaître dans un océan de pixels moches.</p>
                 </div>
@@ -176,28 +179,28 @@
                 </div>
                 <div class="video-list bg-pink">
                     <div class="video-item d-flex cursor">
-                        <div class="video-thumb bg-black">
+                        <div class="video-thumb pos-rel pos-rel bg-black">
                             <img class="w-100" src="https://via.placeholder.com/200x120/cc0000/ffffff?text=PSL+LOVES+ENC" alt="Video">
-                            <span class="video-duration text-white bg-black">10:04</span>
+                            <span class="video-duration pos-abs fs-9 text-white bg-black">10:04</span>
                         </div>
-                        <div class="video-meta text-bold text-white"><span class="title d-block">RUMEUR : PSL fait les yeux doux à l'ENC... La Sorbonne jalouse ?</span><span class="views text-normal">99k vues</span></div>
+                        <div class="video-meta text-bold text-white"><span class="title d-block">RUMEUR : PSL fait les yeux doux à l'ENC... La Sorbonne jalouse ?</span><span class="views fs-9 text-normal">99k vues</span></div>
                     </div>
                     
                     <div class="video-item d-flex cursor">
-                        <div class="video-thumb bg-black">
+                        <div class="video-thumb pos-rel bg-black">
                             <img class="w-100" src="https://via.placeholder.com/200x120/003366/ffffff?text=CLASH+ENC" alt="Video">
-                            <span class="video-duration bg-black">3:30</span>
+                            <span class="video-duration pos-abs fs-9 bg-black">3:30</span>
                         </div>
-                        <div class="video-meta text-white"><span class="title d-block">CLASH : Table ronde ou ring de boxe ? (Images censurées)</span><span class="views text-normal">1M vues</span></div>
+                        <div class="video-meta text-white"><span class="title d-block">CLASH : Table ronde ou ring de boxe ? (Images censurées)</span><span class="views fs-9 text-normal">1M vues</span></div>
                     </div>
                 </div>
             </div>
 
             <div class="fake-ad-sms alerte shadow">
-                <h3 class="text-red">⚠️ INFIDÉLITÉ ? ⚠️</h3>
+                <h3 class="text-red fs-16">⚠️ INFIDÉLITÉ ? ⚠️</h3>
                 <p class="text-bold">Ton partenaire utilise-t-il<br>OMEKA S<br>dans ton dos ?</p>
                 <p class="text-bold">Pour le savoir, envoie</p>
-                <div class="sms-code text-white bg-black">ADEMEC</div>
+                <div class="sms-code d-inline-block fs-16 text-white bg-black">ADEMEC</div>
                 <p class="text-bold">au 71515</p>
                 <p class="text-normal">(0,50€ / SMS + coût adhésion ADEMEC)</p>
             </div>
